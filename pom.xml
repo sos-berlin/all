@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.sos-berlin</groupId>
+		<artifactId>company-pom</artifactId>
+		<version>1.8.0</version>
+	</parent>
+
+	<version>1.8-SNAPSHOT</version>
+	<groupId>com.sos-berlin</groupId>
+	<artifactId>products</artifactId>
+	<packaging>pom</packaging>
+	<name>${project.artifactId}</name>
+	<inceptionYear>2014</inceptionYear>
+
+	<scm>
+		<connection>scm:svn:http://subversion.sos/svn/sos/java.sources/branches/products</connection>
+		<developerConnection>scm:svn:http://subversion.sos/svn/sos/java.sources/trunk/products</developerConnection>
+	</scm>
+
+	<properties>
+		<sos.engine.version>1.8-SNAPSHOT</sos.engine.version>
+		<base.url>http://subversion.sos/svn/sos/java.sources</base.url>
+		<project.base.path>${project.artifactId}</project.base.path>
+		<!-- The current encoding properties - should be changed to UTF-8 -->
+		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>Cp1252</project.reporting.outputEncoding>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<!-- The projects basedir can get with System.getProperty("project.dir") -->
+					<systemPropertyVariables>
+						<project.dir>${project.basedir}</project.dir>
+					</systemPropertyVariables>
+					<excludes>
+						<!-- oh 15.04.13 test laeuft endlos -->
+						<exclude>/sos/scheduler/LaunchAndObserve/*LaunchAndObserveJUnitTest.java</exclude>
+						<!-- oh 15.04.13 test laeuft 5min -->
+						<exclude>/sos/scheduler/LaunchAndObserve/LaunchAndObserveTest.java</exclude>
+						<!-- oh 16.04.13 test haengt -->
+						<exclude>sos/scheduler/db/SOSSQLPlusJobJUnitTest.java</exclude>
+						<!-- oh 06.05.14 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: 
+							Java heap space -->
+						<exclude>/com/sos/DataExchange/JadeTestJCraftsFtp.java</exclude>
+						<!-- oh 18.04.14 No runnable methods -->
+						<exclude>/com/sos/DataExchange/JadeTestBase.java</exclude>
+						<!-- oh 18.04.14 No runnable methods -->
+						<exclude>/sos/scheduler/checkrun/CheckRunJUnitTest.java</exclude>
+						<!-- oh 18.04.14 No runnable methods -->
+						<exclude>/sos/ftphistory/db/TestJadeFilesHistorie.java</exclude>
+						<!-- oh 18.04.14 No runnable methods -->
+						<exclude>/com/sos/VirtualFileSystem/TransferHistoryExport/JadeTransferDetailHistoryExportDataTest.java</exclude>
+						<exclude>/com/sos/VirtualFileSystem/TransferHistoryExport/JadeTransferHistoryExportDataTest.java</exclude>
+						<!-- oh 07.04.14 deprecated -->
+						<exclude>/sos/scheduler/InstallationService/JSBatchInstallerJUnitTest.java</exclude>
+						<!-- oh 07.05.14 No runnable methods -->
+						<exclude>/com/sos/scheduler/model/test/TestLoadSchedulerXMLMain.java</exclude>
+						<!-- oh 07.05.14 test haengt? -->
+						<exclude>/sos/net/ssh/SOSSSHJob2Test.java</exclude>
+						<exclude>sos/scheduler/file/JobSchedulerFileOperationsBaseTest.java</exclude>
+						<!-- sp 10.06.14 Test hängt im Jenkins build, lokal gibt es eine SocketTimeoutException! -->
+						<exclude>sos/scheduler/CheckRunHistory/JobSchedulerCheckRunHistoryJUnitTest.java</exclude>
+						<!-- oh 15.04.13 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: 
+							Java heap space -->
+						<!--exclude>**/*JadeTestFtpAsSource.java</exclude -->
+						<!-- oh 02.05.14 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: 
+							Java heap space -->
+						<!--exclude>**/JadeTestCifs*.java</exclude -->
+						<!-- oh 15.04.13 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: 
+							Java heap space -->
+						<!--exclude>**/*JadeTestLocal.java</exclude -->
+						<!-- oh 15.04.13 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: 
+							Java heap space -->
+						<!--exclude>**/*SOSDataExchangeEngineTest.java</exclude -->
+						<!-- oh 06.05.14 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: 
+							Java heap space -->
+						<!--exclude>**/JadeTestFtp*.java</exclude -->
+						<!-- sp 07.11.14 test hängt sich auf, wenn JobScheduler:4210 auf 8of9 
+							nicht erreichbar ist! -->
+						<!--exclude>/com/sos/scheduler.model.SchedulerObjectFactoryTest.java</exclude -->
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- unpack the common resources into a separate folder -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>get-resources</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.sos-berlin.commons</groupId>
+									<artifactId>common-resources</artifactId>
+									<version>${project.version}</version>
+									<type>jar</type>
+									<overWrite>false</overWrite>
+								</artifactItem>
+							</artifactItems>
+							<outputDirectory>${project.build.directory}/common-resources</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<modules>
+		<module>graphviz-adapter</module>
+		<module>commons</module>
+		<module>jobscheduler</module>
+		<module>joe</module>
+		<module>jade</module>
+		<module>jid</module>
+		<module>jitl</module>
+		<module>joc</module>
+		<module>notification</module>
+	</modules>
+
+	<profiles>
+
+        <!-- This profile is for collecting the sources of all artifacts in one jar (in the install phase). In case of deployment the sources will also deployed -->
+        <profile>
+            <id>collect-sources</id>
+
+            <build>
+                <plugins>
+
+                    <!-- Aggregate the source of all artifacts -->
+                    <plugin>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>aggregate-sources</id>
+                                <goals>
+                                    <goal>aggregate</goal>
+                                </goals>
+                                <inherited>false</inherited>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                </plugins>
+
+            </build>
+
+        </profile>
+
+		<profile>
+			<id>build-3rdParty-licences-file</id>
+			<build>
+				<plugins>
+					<!-- generates a 3rdParty-licences.txt -->
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>license-maven-plugin</artifactId>
+						<version>1.7</version>
+						<executions>
+							<execution>
+								<id>download-3rdParty-licenses</id>
+								<goals>
+									<goal>aggregate-add-third-party</goal>
+								</goals>
+								<configuration>
+									<outputDirectory>${project.build.directory}/licences</outputDirectory>
+									<thirdPartyFilename>3rdParty-licences.txt</thirdPartyFilename>
+									<sortArtifactByName>true</sortArtifactByName>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+	</profiles>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.sos.scheduler.engine</groupId>
+                <artifactId>engine-job-api</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos.scheduler.enginedoc</groupId>
+                <artifactId>enginedoc-common</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos.scheduler.engine</groupId>
+                <artifactId>kernel</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos.scheduler.engine</groupId>
+                <artifactId>test</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
