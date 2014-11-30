@@ -1,15 +1,12 @@
-[submodule "jitl"]
-	path = jitl
-	url = git@github.com:sos-berlin/jitl.git
-[submodule "jid"]
-	path = jid
-	url = git@github.com:sos-berlin/jid.git
 [submodule "joe"]
 	path = joe
 	url = git@github.com:sos-berlin/joe.git
 [submodule "joc"]
 	path = joc
 	url = git@github.com:sos-berlin/joc.git
+[submodule "jitl"]
+	path = jitl
+	url = git@github.com:sos-berlin/jitl.git
 [submodule "jade"]
 	path = jade
 	url = git@github.com:sos-berlin/jade.git
@@ -19,3 +16,6 @@
 [submodule "jscommons"]
 	path = jscommons
 	url = git@github.com:sos-berlin/jscommons.git
+[submodule "jid"]
+	path = jid
+	url = git@github.com:sos-berlin/jid.git
