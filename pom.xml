@@ -126,7 +126,7 @@
 	<modules>
 		<!--module>graphviz-adapter</module-->
 		<module>commons</module>
-		<module>jobscheduler</module>
+		<module>jscommons</module>
 		<module>joe</module>
 		<module>jade</module>
 		<module>jid</module>
