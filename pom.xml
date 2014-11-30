@@ -124,7 +124,7 @@
 	</build>
 
 	<modules>
-		<module>graphviz-adapter</module>
+		<!--module>graphviz-adapter</module-->
 		<module>commons</module>
 		<module>jobscheduler</module>
 		<module>joe</module>
@@ -132,7 +132,7 @@
 		<module>jid</module>
 		<module>jitl</module>
 		<module>joc</module>
-		<module>notification</module>
+		<!--module>notification</module-->
 	</modules>
 
 	<profiles>
