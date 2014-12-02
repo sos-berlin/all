@@ -13,9 +13,15 @@
 [submodule "commons"]
 	path = commons
 	url = git@github.com:sos-berlin/commons.git
-[submodule "jscommons"]
-	path = jscommons
-	url = git@github.com:sos-berlin/jscommons.git
 [submodule "jid"]
 	path = jid
 	url = git@github.com:sos-berlin/jid.git
+[submodule "notification"]
+	path = notification
+	url = git@github.com:sos-berlin/notification.git
+[submodule "commons-graphviz"]
+	path = commons-graphviz
+	url = git@github.com:sos-berlin/commons-graphviz.git
+[submodule "commons-jobscheduler"]
+	path = commons-jobscheduler
+	url = git@github.com:sos-berlin/commons-jobscheduler.git
