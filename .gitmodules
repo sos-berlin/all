@@ -16,9 +16,6 @@
 [submodule "jid"]
 	path = jid
 	url = git@github.com:sos-berlin/jid.git
-[submodule "notification"]
-	path = notification
-	url = git@github.com:sos-berlin/notification.git
 [submodule "commons-graphviz"]
 	path = commons-graphviz
 	url = git@github.com:sos-berlin/commons-graphviz.git
