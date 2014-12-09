@@ -16,10 +16,11 @@
 	<name>${project.artifactId}</name>
 	<inceptionYear>2014</inceptionYear>
 
-	<scm>
-		<connection>scm:svn:http://subversion.sos/svn/sos/java.sources/branches/products</connection>
-		<developerConnection>scm:svn:http://subversion.sos/svn/sos/java.sources/trunk/products</developerConnection>
-	</scm>
+  <scm>
+      <connection>scm:git:git@github.com:sos-berlin/all.git</connection>
+      <developerConnection>scm:git:git@github.com:sos-berlin/all.git</developerConnection>
+      <url>https://github.com/sos-berlin/all</url>
+  </scm>
 
 	<properties>
 		<sos.engine.version>1.8-SNAPSHOT</sos.engine.version>
