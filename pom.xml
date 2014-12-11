@@ -16,8 +16,9 @@
     <inceptionYear>2014</inceptionYear>
 
     <scm>
-        <connection>scm:svn:http://subversion.sos/svn/sos/java.sources/branches/products/1.7.4-SNAPSHOT</connection>
-        <developerConnection>scm:svn:http://subversion.sos/svn/sos/java.sources/branches/products/1.7.4-SNAPSHOT</developerConnection>
+        <connection>scm:git:git@github.com:sos-berlin/all.git</connection>
+        <developerConnection>scm:git:git@github.com:sos-berlin/all.git</developerConnection>
+        <url>https://github.com/sos-berlin/all</url>
     </scm>
 
     <properties>
