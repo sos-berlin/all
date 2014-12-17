@@ -10,7 +10,6 @@
 	</parent>
 
 	<version>1.8-SNAPSHOT</version>
-	<groupId>com.sos-berlin</groupId>
 	<artifactId>products</artifactId>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
