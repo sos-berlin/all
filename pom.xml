@@ -9,7 +9,7 @@
 		<version>1.8.6</version>
 	</parent>
 
-	<version>1.8-SNAPSHOT</version>
+	<version>1.8-RC1</version>
 	<artifactId>products</artifactId>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
