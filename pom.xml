@@ -406,23 +406,23 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.sos.scheduler.engine</groupId>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
                 <artifactId>engine-job-api</artifactId>
                 <version>${sos.engine.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.sos.scheduler.enginedoc</groupId>
+                <groupId>com.sos-berlin.jobscheduler.enginedoc</groupId>
                 <artifactId>enginedoc-common</artifactId>
                 <version>${sos.engine.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.sos.scheduler.engine</groupId>
-                <artifactId>kernel</artifactId>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>engine-kernel</artifactId>
                 <version>${sos.engine.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.sos.scheduler.engine</groupId>
-                <artifactId>test</artifactId>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>engine-test</artifactId>
                 <version>${sos.engine.version}</version>
             </dependency>
         </dependencies>
