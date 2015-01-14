@@ -9,7 +9,7 @@
 		<version>1.8.6</version>
 	</parent>
 
-	<version>1.8-SNAPSHOT</version>
+	<version>1.9-SNAPSHOT</version>
 	<artifactId>products</artifactId>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
@@ -22,7 +22,7 @@
   </scm>
 
 	<properties>
-		<sos.engine.version>1.8-RC1</sos.engine.version>
+		<sos.engine.version>1.9-SNAPSHOT</sos.engine.version>
 		<base.url>http://subversion.sos/svn/sos/java.sources</base.url>
 		<project.base.path>${project.artifactId}</project.base.path>
 		<!-- The current encoding properties - should be changed to UTF-8 -->
@@ -194,9 +194,9 @@
 		<profile>
 			<id>init</id>
 			<properties>
-				<versionBranch>release/1.8</versionBranch>
-				<releaseVersion>1.8</releaseVersion>
-				<snapshotVersion>1.8.1-SNAPSHOT</snapshotVersion>
+				<versionBranch>master</versionBranch>
+				<releaseVersion>1.9.0</releaseVersion>
+				<snapshotVersion>1.9-SNAPSHOT</snapshotVersion>
 			</properties>
 			<build>
 				<plugins>
@@ -273,8 +273,8 @@
 			<id>prepare-release</id>
 			<properties>
 				<versionBranch>master</versionBranch>
-				<releaseVersion>1.8.0</releaseVersion>
-				<snapshotVersion>1.8.1-SNAPSHOT</snapshotVersion>
+				<releaseVersion>1.9.0</releaseVersion>
+				<snapshotVersion>1.9-SNAPSHOT</snapshotVersion>
 			</properties>
 			<build>
 				<plugins>
