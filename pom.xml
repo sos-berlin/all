@@ -195,7 +195,7 @@
 			<id>init</id>
 			<properties>
 				<versionBranch>release/1.8</versionBranch>
-				<releaseVersion>1.8</releaseVersion>
+				<releaseVersion>1.8.0</releaseVersion>
 				<snapshotVersion>1.8.1-SNAPSHOT</snapshotVersion>
 			</properties>
 			<build>
