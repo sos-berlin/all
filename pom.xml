@@ -9,7 +9,7 @@
 		<version>1.8.7</version>
 	</parent>
 
-	<version>1.8.1-SNAPSHOT</version>
+	<version>1.8.1-ALPHATEST1-SNAPSHOT</version>
 	<artifactId>products</artifactId>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
@@ -22,8 +22,7 @@
   </scm>
 
 	<properties>
-		<sos.engine.version>1.8.1-SNAPSHOT</sos.engine.version>
-		<base.url>http://subversion.sos/svn/sos/java.sources</base.url>
+		<sos.engine.version>${project.version}</sos.engine.version>
 		<project.base.path>${project.artifactId}</project.base.path>
 		<!-- The current encoding properties - should be changed to UTF-8 -->
 		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
