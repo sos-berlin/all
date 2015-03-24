@@ -36,7 +36,7 @@
         <project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
         <project.reporting.outputEncoding>Cp1252</project.reporting.outputEncoding>
 
-        <sos.engine.version>1.7.4</sos.engine.version>
+        <sos.engine.version>1.7.5.RC1</sos.engine.version>
 
         <!-- The version number to build the legacy jar files for the old ant controlled build -->
         <legacy.setup.version>1.7</legacy.setup.version>
