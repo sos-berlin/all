@@ -22,7 +22,7 @@
   </scm>
 
 	<properties>
-		<sos.engine.version>1.8.0</sos.engine.version>
+		<sos.engine.version>1.8.2-RC1</sos.engine.version>
 		<base.url>http://subversion.sos/svn/sos/java.sources</base.url>
 		<project.base.path>${project.artifactId}</project.base.path>
 		<!-- The current encoding properties - should be changed to UTF-8 -->
