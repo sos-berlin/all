@@ -5,5 +5,5 @@
 #                                                                   #
 #####################################################################
 echo ********************SET VERSION TO ${releaseVersion}********************
-mvn versions:set -DnewVersion=${releaseVersion} -DgenerateBackupPoms=false
+mvn org.codehaus.mojo:versions-maven-plugin:1.3.1:set -DnewVersion=${releaseVersion} -DgenerateBackupPoms=false
 echo ********************SET VERSION FINISHED********************************
