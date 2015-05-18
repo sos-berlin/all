@@ -23,7 +23,6 @@
 
 	<properties>
 		<sos.engine.version>1.10-SNAPSHOT</sos.engine.version>
-		<base.url>http://subversion.sos/svn/sos/java.sources</base.url>
 		<project.base.path>${project.artifactId}</project.base.path>
 		<!-- The current encoding properties - should be changed to UTF-8 -->
 		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
@@ -32,69 +31,6 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<configuration>
-					<!-- The projects basedir can get with System.getProperty("project.dir") -->
-					<systemPropertyVariables>
-						<project.dir>${project.basedir}</project.dir>
-					</systemPropertyVariables>
-					<excludes>
-						<!-- oh 15.04.13 test laeuft endlos -->
-						<exclude>/sos/scheduler/LaunchAndObserve/*LaunchAndObserveJUnitTest.java</exclude>
-						<!-- oh 15.04.13 test laeuft 5min -->
-						<exclude>/sos/scheduler/LaunchAndObserve/LaunchAndObserveTest.java</exclude>
-						<!-- oh 16.04.13 test haengt -->
-						<exclude>sos/scheduler/db/SOSSQLPlusJobJUnitTest.java</exclude>
-						<!-- oh 06.05.14 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: 
-							Java heap space -->
-						<exclude>/com/sos/DataExchange/JadeTestJCraftsFtp.java</exclude>
-						<!-- oh 18.04.14 No runnable methods -->
-						<exclude>/com/sos/DataExchange/JadeTestBase.java</exclude>
-						<!-- oh 18.04.14 No runnable methods -->
-						<exclude>/sos/scheduler/checkrun/CheckRunJUnitTest.java</exclude>
-						<!-- oh 18.04.14 No runnable methods -->
-						<exclude>/sos/ftphistory/db/TestJadeFilesHistorie.java</exclude>
-						<!-- oh 18.04.14 No runnable methods -->
-						<exclude>/com/sos/VirtualFileSystem/TransferHistoryExport/JadeTransferDetailHistoryExportDataTest.java</exclude>
-						<exclude>/com/sos/VirtualFileSystem/TransferHistoryExport/JadeTransferHistoryExportDataTest.java</exclude>
-						<!-- oh 07.04.14 deprecated -->
-						<exclude>/sos/scheduler/InstallationService/JSBatchInstallerJUnitTest.java</exclude>
-						<!-- oh 07.05.14 No runnable methods -->
-						<exclude>/com/sos/scheduler/model/test/TestLoadSchedulerXMLMain.java</exclude>
-						<!-- oh 07.05.14 test haengt? -->
-						<exclude>/sos/net/ssh/SOSSSHJob2Test.java</exclude>
-						<exclude>sos/scheduler/file/JobSchedulerFileOperationsBaseTest.java</exclude>
-						<!-- sp 10.06.14 Test hängt im Jenkins build, lokal gibt es eine SocketTimeoutException! -->
-						<exclude>sos/scheduler/CheckRunHistory/JobSchedulerCheckRunHistoryJUnitTest.java</exclude>
-						<!-- oh 15.04.13 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: 
-							Java heap space -->
-						<!--exclude>**/*JadeTestFtpAsSource.java</exclude -->
-						<!-- oh 02.05.14 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: 
-							Java heap space -->
-						<!--exclude>**/JadeTestCifs*.java</exclude -->
-						<!-- oh 15.04.13 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: 
-							Java heap space -->
-						<!--exclude>**/*JadeTestLocal.java</exclude -->
-						<!-- oh 15.04.13 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: 
-							Java heap space -->
-						<!--exclude>**/*SOSDataExchangeEngineTest.java</exclude -->
-						<!-- oh 06.05.14 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: 
-							Java heap space -->
-						<!--exclude>**/JadeTestFtp*.java</exclude -->
-						<!-- sp 07.11.14 test hängt sich auf, wenn JobScheduler:4210 auf 8of9 
-							nicht erreichbar ist! -->
-						<!--exclude>/com/sos/scheduler.model.SchedulerObjectFactoryTest.java</exclude -->
-					</excludes>
-				</configuration>
-				<executions>
-					<execution>
-						<phase>validate</phase>
-					</execution>
-				</executions>
-			</plugin>
-			<!-- unpack the common resources into a separate folder -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -195,8 +131,8 @@
 			<id>init</id>
 			<properties>
 				<versionBranch>master</versionBranch>
-				<releaseVersion>1.9.0</releaseVersion>
-				<snapshotVersion>1.9-SNAPSHOT</snapshotVersion>
+				<releaseVersion>1.9.1</releaseVersion>
+				<snapshotVersion>1.9.1-SNAPSHOT</snapshotVersion>
 			</properties>
 			<build>
 				<plugins>
@@ -273,8 +209,8 @@
 			<id>prepare-release</id>
 			<properties>
 				<versionBranch>master</versionBranch>
-				<releaseVersion>1.9.0</releaseVersion>
-				<snapshotVersion>1.9-SNAPSHOT</snapshotVersion>
+				<releaseVersion>1.9.1</releaseVersion>
+				<snapshotVersion>1.9.1-SNAPSHOT</snapshotVersion>
 			</properties>
 			<build>
 				<plugins>
