@@ -5,5 +5,5 @@
 #                                                                   #
 #####################################################################
 echo ********************SET VERSION TO ${snapshotVersion}*******************
-mvn versions:set -DnewVersion=${snapshotVersion} -DgenerateBackupPoms=false
+mvn org.codehaus.mojo:versions-maven-plugin:1.3.1:set -DnewVersion=${snapshotVersion} -DgenerateBackupPoms=false
 echo ********************SET VERSION FINISHED*******************
