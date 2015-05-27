@@ -2,18 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.sos-berlin.administration.maven</groupId>
-        <artifactId>company-pom</artifactId>
-        <version>1.7.4178</version>
-    </parent>
-
-    <version>1.7.6-SNAPSHOT</version>
     <groupId>com.sos-berlin</groupId>
     <artifactId>products</artifactId>
+    <version>1.7.6-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
     <inceptionYear>2014</inceptionYear>
+
+    <organization>
+        <name>SOS Software GmbH, Berlin</name>
+        <url>http://www.sos-berlin.com</url>
+    </organization>
 
     <scm>
         <connection>scm:git:git@github.com:sos-berlin/all.git</connection>
@@ -21,33 +20,32 @@
         <url>https://github.com/sos-berlin/all</url>
     </scm>
 
+    <modules>
+        <module>commons</module>
+        <module>commons-jobscheduler</module>
+        <module>commons-graphviz</module>
+        <module>joe</module>
+        <module>jade</module>
+        <module>jid</module>
+        <module>jitl</module>
+        <module>joc</module>
+    </modules>
+
     <properties>
+        <sos.engine.version>1.7.5</sos.engine.version>
 
         <!-- To deploy the aggregated sources into the release repository set -Dsource-repo=sos-release -->
         <source.repo>snapshots</source.repo>
-
-        <base.url>http://subversion.sos/svn/sos/java.sources</base.url>
-
+        <base.url>https://github.com/sos-berlin/all</base.url>
         <setup.version.timekey>unknown</setup.version.timekey>
-
         <project.base.path>${project.artifactId}</project.base.path>
-
         <!-- The current encoding properties - should be changed to UTF-8 -->
         <project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
         <project.reporting.outputEncoding>Cp1252</project.reporting.outputEncoding>
-
-        <sos.engine.version>1.7.5</sos.engine.version>
-
         <!-- The version number to build the legacy jar files for the old ant controlled build -->
         <legacy.setup.version>1.7</legacy.setup.version>
-
-        <!--
-        Solange die jar files auf r2d2 in die Verzeichnisse lib_release_unversioned_jar und lib-release_jar kopiert werden, ist in jedem Projekt
-        dessen jar in diese Verzeichniss kopiert werden soll diese Eigenschaft auf false zu setzen.
-        -->
         <setup.do.not.deploy>true</setup.do.not.deploy>
         <setup.target.name>unknown-target-name</setup.target.name>
-
         <!-- Properties for deploying the jar files to the old folder layout -->
         <setup.target.base>r:/backup/sos/java</setup.target.base>
         <setup.target.jars>${setup.target.base}/lib_release_jar/${setup.version.timekey}</setup.target.jars>
@@ -55,9 +53,80 @@
         <setup.target.lib.unversioned>${setup.target.base}/lib_release_unversioned_jar</setup.target.lib.unversioned>
         <setup.target.sources>${setup.target.base}/lib_release_sources_jar/${setup.version.timekey}
         </setup.target.sources>
-
         <setup.target.name>jobscheduler.sources</setup.target.name>
-
+        <!-- versions of 3rd party libraries -->
+        <slf4j.version>1.6.4</slf4j.version>
+        <guava.version>15.0</guava.version>
+        <junit.version>4.10</junit.version>
+        <antlr.version>2.7.7</antlr.version>
+        <hamcrest.version>1.2.1</hamcrest.version>
+        <log4j.version>1.2.16</log4j.version>
+        <logback.version>1.0.13</logback.version>
+        <joda.time.version>2.1</joda.time.version>
+        <joda.time.hibernate.version>1.3</joda.time.hibernate.version>
+        <!-- Hibernate Migration auf 4.x steht aus siehe auch http://blog-it.hypoport.de/2012/05/10/hibernate-4-migration/ -->
+        <hibernate.version>3.6.6.Final</hibernate.version>
+        <!-- hibernate.version>4.3.5.Final</hibernate.version -->
+        <hibernate.jpa.version>1.0.1.Final</hibernate.jpa.version>
+        <jackson.version>2.3.0</jackson.version>
+        <!-- jackson.version>2.1.2</jackson.version -->
+        <jersey.version>1.17</jersey.version>
+        <!-- normally the version of ... is the same like jackson.version, but the current used version does not work for Feature.USE_TRANSIENT_ANNOTATION (see https://github.com/FasterXML/jackson-datatype-hibernate/issues/47 for details) -->
+        <!-- jackson.version.hibernate>2.3.1</jackson.version.hibernate -->
+        <jackson.version.hibernate>${jackson.version}</jackson.version.hibernate>
+        <jaxrs.version>1.9.13</jaxrs.version>
+        <javax.servlet.version>2.5</javax.servlet.version>
+        <!-- javassist.version>3.3</javassist.version -->
+        <javassist.version>3.12.1.GA</javassist.version>
+        <xerces.version>2.11.0</xerces.version>
+        <xalan.version>2.7.1</xalan.version>
+        <jta.version>1.1</jta.version>
+        <mysql.connector.version>3.1.11</mysql.connector.version>
+        <jtds.version>1.2.2</jtds.version>
+        <jcifs.version>1.3.17</jcifs.version>
+        <dom4j.version>1.6.1</dom4j.version>
+        <org.jdom.version>1.1</org.jdom.version>
+        <jasperreports.version>3.7.2</jasperreports.version>
+        <h2.version>1.3.170</h2.version>
+        <saxon.version>9.5.1-5</saxon.version>
+        <javax.mail.version>1.4</javax.mail.version>
+        <apache.shiro.version>1.2.3</apache.shiro.version>
+        <apache.activemq.version>5.4.2</apache.activemq.version>
+        <webdavclient4j.version>0.92</webdavclient4j.version>
+        <ganymed.ssh2.version>261</ganymed.ssh2.version>
+        <apache.httpcomponents.httpclient.version>4.3.2</apache.httpcomponents.httpclient.version>
+        <slide.webdavlib.version>2.1</slide.webdavlib.version>
+        <jaxen.version>1.1.1</jaxen.version>
+        <bouncycastle.version>1.50</bouncycastle.version>
+        <itext.version>1.3</itext.version>
+        <!-- This is explicitly not the newest version, because it causes a java.lang.NoClassDefFoundError (see http://stackoverflow.com/questions/13840989/eclipse-java-lang-noclassdeffounderror-org-w3c-dom-elementtraversal) -->
+        <!-- xml.apis.version>2.0.2</xml.apis.version -->
+        <xml.apis.version>1.4.01</xml.apis.version>
+        <apache.commons.logging.version>1.1.1</apache.commons.logging.version>
+        <apache.commons.httpclient.version>3.1</apache.commons.httpclient.version>
+        <apache.commons.codec.version>1.9</apache.commons.codec.version>
+        <apache.commons.lang.version>3.1</apache.commons.lang.version>
+        <apache.commons.net.version>3.3</apache.commons.net.version>
+        <commons.collections.version>3.1</commons.collections.version>
+        <commons.cli.version>1.0</commons.cli.version>
+        <commons.beanutils.version>1.8.3</commons.beanutils.version>
+        <apache.poi.version>3.10-FINAL</apache.poi.version>
+        <google.inject.version>3.0</google.inject.version>
+        <google.findbugs.version>2.0.0</google.findbugs.version>
+        <jcraft.version>0.1.51</jcraft.version>
+        <!-- GUI specific dependencies -->
+        <swt.version>4.3</swt.version>
+        <ui.workbench.version>3.7.1.v20120104-1859</ui.workbench.version>
+        <jface.version>3.8.0.v20120521-2329</jface.version>
+        <jface.text.version>3.3.0-v20070606-0010</jface.text.version>
+        <eclipse.core.runtime.version>3.9.100-v20131218-1515</eclipse.core.runtime.version>
+        <eclipse.core.commands.version>3.3.0-I20070605-0010</eclipse.core.commands.version>
+        <eclipse.equinox.common.version>3.6.200-v20130402-1505</eclipse.equinox.common.version>
+        <vaadin.version>7.1.5</vaadin.version>
+        <!-- sos internal jars from the repo 3rdparty -->
+        <sos.ojdbc.version>11.1.0.7.0-Production</sos.ojdbc.version>
+        <sos.trilead.ssh.version>211</sos.trilead.ssh.version>
+        <ldap.jdk.version>1.0</ldap.jdk.version>
     </properties>
 
     <build>
@@ -86,12 +155,8 @@
                         <!-- oh 18.04.14 No runnable methods -->
                         <exclude>/sos/ftphistory/db/TestJadeFilesHistorie.java</exclude>
                         <!-- oh 18.04.14 No runnable methods -->
-                        <exclude>
-                            /com/sos/VirtualFileSystem/TransferHistoryExport/JadeTransferDetailHistoryExportDataTest.java
-                        </exclude>
-                        <exclude>
-                            /com/sos/VirtualFileSystem/TransferHistoryExport/JadeTransferHistoryExportDataTest.java
-                        </exclude>
+                        <exclude>/com/sos/VirtualFileSystem/TransferHistoryExport/JadeTransferDetailHistoryExportDataTest.java</exclude>
+                        <exclude>/com/sos/VirtualFileSystem/TransferHistoryExport/JadeTransferHistoryExportDataTest.java</exclude>
                         <!-- oh 07.04.14 deprecated -->
                         <exclude>/sos/scheduler/InstallationService/JSBatchInstallerJUnitTest.java</exclude>
                         <!-- oh 07.05.14 No runnable methods -->
@@ -99,20 +164,6 @@
                         <!-- oh 07.05.14 test haengt? -->
                         <exclude>/sos/net/ssh/SOSSSHJob2Test.java</exclude>
                         <exclude>sos/scheduler/file/JobSchedulerFileOperationsBaseTest.java</exclude>
-                        <!-- oh 15.04.13 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: Java heap space -->
-                        <!--exclude>**/*JadeTestFtpAsSource.java</exclude -->
-                        <!-- oh 02.05.14 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: Java heap space -->
-                        <!--exclude>**/JadeTestCifs*.java</exclude -->
-                        <!-- oh 15.04.13 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: Java heap space -->
-                        <!--exclude>**/*JadeTestLocal.java</exclude -->
-                        <!-- oh 15.04.13 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: Java heap space -->
-                        <!--exclude>**/*SOSDataExchangeEngineTest.java</exclude -->
-                        <!-- oh 06.05.14 test crashed: Exception in thread "main" java.lang.OutOfMemoryError: Java heap space -->
-                        <!--exclude>**/JadeTestFtp*.java</exclude -->
-
-                        <!-- sp 07.11.14 test hängt sich auf, wenn JobScheduler:4210 auf 8of9 nicht erreichbar ist! -->
-                        <!--exclude>/com/sos/scheduler.model.SchedulerObjectFactoryTest.java</exclude-->
-
                     </excludes>
                 </configuration>
                 <executions>
@@ -121,31 +172,420 @@
                     </execution>
                 </executions>
             </plugin>
-
+            <!-- unpack the common resources into a separae folder -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>get-resources</id>
+                        <phase>pre-site</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.sos-berlin.products.commons</groupId>
+                                    <artifactId>common-resources</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>jar</type>
+                                    <overWrite>false</overWrite>
+                                </artifactItem>
+                            </artifactItems>
+                            <outputDirectory>${project.build.directory}/common-resources</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- copy the general doxygen configuration template and replace project specific properties -->
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>pre-site</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/doxygen.config</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}/common-resources</directory>
+                                    <includes>
+                                        <include>general.doxyfile</include>
+                                    </includes>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <optimize>true</optimize>
+                    <showDeprecation>true</showDeprecation>
+                    <showWarnings>true</showWarnings>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>timestamp-property</id>
+                        <goals>
+                            <goal>timestamp-property</goal>
+                        </goals>
+                        <configuration>
+                            <locale>en,US</locale>
+                            <name>timestamp</name>
+                            <pattern>dd.MM.yyyy 'at' HH:mm:ss zzzz</pattern>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <finalName>${project.artifactId}-${project.version}</finalName>
+                    <excludes>
+                        <exclude>**/.svn/*</exclude>
+                        <exclude>**/.git/*</exclude>
+                    </excludes>
+                    <archive>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        </manifest>
+                        <manifestEntries>
+                            <CreatedAt>${timestamp}</CreatedAt>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+            </plugin>
         </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.sos-berlin.administration.maven</groupId>
+                    <artifactId>sos-release-maven-plugin</artifactId>
+                    <version>1.1.4154</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.6</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>2.5</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>buildnumber-maven-plugin</artifactId>
+                    <version>1.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>jaxb2-maven-plugin</artifactId>
+                    <version>1.5</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.3.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>2.5</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                    <version>2.7</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>2.9</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.7</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>2.2.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.14.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>2.7</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-scm-plugin</artifactId>
+                    <version>1.8.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <version>1.8</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>1.6</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>2.4</version>
+                </plugin>
+                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>org.codehaus.mojo</groupId>
+                                        <artifactId>build-helper-maven-plugin</artifactId>
+                                        <versionRange>[1.0,)</versionRange>
+                                        <goals>
+                                            <goal>add-source</goal>
+                                            <goal>add-test-source</goal>
+                                            <goal>add-resource</goal>
+                                            <goal>add-test-resource</goal>
+                                            <goal>maven-version</goal>
+                                            <goal>parse-version</goal>
+                                            <goal>timestamp-property</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <execute>
+                                            <runOnConfiguration>true</runOnConfiguration>
+                                            <runOnIncremental>true</runOnIncremental>
+                                        </execute>
+                                    </action>
+                                </pluginExecution>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>org.apache.maven.plugins</groupId>
+                                        <artifactId>maven-dependency-plugin</artifactId>
+                                        <versionRange>[2.7,)</versionRange>
+                                        <goals>
+                                            <goal>unpack</goal>
+                                            <goal>copy-dependencies</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore />
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
-
-    <modules>
-        <module>commons</module>
-        <module>commons-jobscheduler</module>
-        <module>commons-graphviz</module>
-        <module>joe</module>
-        <module>jade</module>
-        <module>jid</module>
-        <module>jitl</module>
-        <module>joc</module>
-        <!--module>setups</module-->
-    </modules>
+    <reporting>
+        <plugins>
+            <!--
+            a prototype for doxygen integration. Projectname, Version etc. are set to fix values in the configurationFile and
+            mixing with properties setting in the plugin configuration is not possible.
+            see profile prepare-doxygen also
+            -->
+            <plugin>
+                <groupId>com.soebes.maven.plugins.dmg</groupId>
+                <artifactId>doxygen-maven-plugin</artifactId>
+                <version>1.0.1</version>
+                <configuration>
+                    <quiet>false</quiet>
+                    <configurationFile>${project.build.directory}/doxygen.config/general.doxyfile</configurationFile>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
 
     <profiles>
-
+        <profile>
+            <id>show-properties</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <inherited>false</inherited>
+                        <version>1.7</version>
+                        <executions>
+                            <execution>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <tasks>
+                                        <echoproperties />
+                                    </tasks>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>windows-x86</id>
+            <activation>
+                <os>
+                    <family>windows</family>
+                    <arch>x86</arch>
+                </os>
+            </activation>
+            <properties>
+                <operatingSystem>windows</operatingSystem>
+                <osArch>windows-x86</osArch>
+                <osFamily>windows</osFamily>
+                <cpuArchitecture>x86</cpuArchitecture>
+                <swtSuffix>win32.win32.x86</swtSuffix>
+            </properties>
+        </profile>
+        <profile>
+            <id>windows-x64</id>
+            <activation>
+                <os>
+                    <family>windows</family>
+                    <arch>amd64</arch>
+                </os>
+            </activation>
+            <properties>
+                <operatingSystem>windows</operatingSystem>
+                <osArch>windows-x64</osArch>
+                <osFamily>windows</osFamily>
+                <cpuArchitecture>x64</cpuArchitecture>
+                <swtSuffix>win32.win32.x86_64</swtSuffix>
+            </properties>
+        </profile>
+        <profile>
+            <id>linux-x86</id>
+            <activation>
+                <os>
+                    <family>unix</family>
+                    <name>Linux</name>
+                    <arch>x86</arch>
+                </os>
+            </activation>
+            <properties>
+                <operatingSystem>linux</operatingSystem>
+                <osArch>linux-x86</osArch>
+                <cpuArchitecture>x86</cpuArchitecture>
+                <swtSuffix>gtk.linux.x86</swtSuffix>
+            </properties>
+        </profile>
+        <profile>
+            <id>linux-i386</id>
+            <activation>
+                <os>
+                    <family>unix</family>
+                    <name>Linux</name>
+                    <arch>i386</arch>
+                </os>
+            </activation>
+            <properties>
+                <operatingSystem>linux</operatingSystem>
+                <osArch>linux-x86</osArch>
+                <cpuArchitecture>x86</cpuArchitecture>
+                <swtSuffix>gtk.linux.x86</swtSuffix>
+            </properties>
+        </profile>
+        <profile>
+            <id>linux-x64</id>
+            <activation>
+                <os>
+                    <family>unix</family>
+                    <name>Linux</name>
+                    <arch>amd64</arch>
+                </os>
+            </activation>
+            <properties>
+                <operatingSystem>linux</operatingSystem>
+                <osArch>linux-x64</osArch>
+                <cpuArchitecture>x64</cpuArchitecture>
+                <swtSuffix>gtk.linux.x86_64</swtSuffix>
+            </properties>
+        </profile>
+        <profile>
+            <id>solaris-x86</id>
+            <activation>
+                <os>
+                    <family>unix</family>
+                    <name>Solaris</name>
+                    <arch>x86</arch>
+                </os>
+            </activation>
+            <properties>
+                <operatingSystem>solaris</operatingSystem>
+                <osArch>solaris-${os.arch}</osArch>
+                <cpuArchitecture>${os.arch}</cpuArchitecture>
+                <swtSuffix>gtk.solaris.x86</swtSuffix>
+            </properties>
+        </profile>
+        <profile>
+            <id>solaris-sparc</id>
+            <activation>
+                <os>
+                    <family>unix</family>
+                    <name>Solaris</name>
+                    <arch>sparc</arch>
+                </os>
+            </activation>
+            <properties>
+                <operatingSystem>solaris</operatingSystem>
+                <osArch>solaris-${os.arch}</osArch>
+                <cpuArchitecture>${os.arch}</cpuArchitecture>
+                <swtSuffix>gtk.solaris.sparc</swtSuffix>
+            </properties>
+        </profile>
+        <profile>
+            <id>aix</id>
+            <activation>
+                <os>
+                    <family>unix</family>
+                    <name>AIX</name>
+                </os>
+            </activation>
+            <properties>
+                <operatingSystem>aix</operatingSystem>
+                <osArch>aix-${os.arch}</osArch>
+                <cpuArchitecture>${os.arch}</cpuArchitecture>
+                <swtSuffix>gtk.aix.ppc64</swtSuffix>
+            </properties>
+        </profile>
         <!-- This profile is for collecting the sources of all artifacts in one jar (in the install phase). In case of deployment the sources will also deployed -->
         <profile>
             <id>collect-sources</id>
-
             <build>
                 <plugins>
-
                     <!-- Aggregate the source of all artifacts -->
                     <plugin>
                         <artifactId>maven-source-plugin</artifactId>
@@ -159,25 +599,20 @@
                             </execution>
                         </executions>
                     </plugin>
-
                 </plugins>
-
             </build>
-
         </profile>
-
         <!--
         Use the profile as follows:
             net use r: \\r2d2.sos\share sos /USER:sos
             set PATH=%PATH%;%SCHEDULER_PARAM_GRAPHVIZ_DIR%
             cd /D r:\backup\sos\java\scheduler_release\com.sos.sos-jar-aggregator
-  mvn scm:update -Psetup -Dsetup.target.base=R:/backup/sos/java -Dsetup.version.timekey=3300 clean install
+			mvn scm:update -Psetup -Dsetup.target.base=R:/backup/sos/java -Dsetup.version.timekey=3300 clean install
         -->
         <profile>
             <id>setup</id>
             <build>
                 <plugins>
-
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>buildnumber-maven-plugin</artifactId>
@@ -196,7 +631,6 @@
                             </execution>
                         </executions>
                     </plugin>
-
                     <plugin>
                         <artifactId>maven-source-plugin</artifactId>
                         <executions>
@@ -209,8 +643,6 @@
                             </execution>
                         </executions>
                     </plugin>
-
-
                     <!-- put the sources jar in lib_release_sources_jar -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -234,19 +666,13 @@
                             </execution>
                         </executions>
                     </plugin>
-
                     <!-- copy: copy the jars of the child artifacts to a target folder after mvn:install -->
                     <plugin>
-
                         <artifactId>maven-dependency-plugin</artifactId>
-
                         <configuration>
                             <skip>${setup.do.not.deploy}</skip>
                         </configuration>
-
                         <executions>
-
-
                             <!-- put the result to a versioned folder unter lib_release_jar -->
                             <execution>
                                 <id>copy</id>
@@ -269,7 +695,6 @@
                                     </artifactItems>
                                 </configuration>
                             </execution>
-
                             <!-- put the jar to the lib folder, too -->
                             <execution>
                                 <id>copy-lib</id>
@@ -290,7 +715,6 @@
                                     </artifactItems>
                                 </configuration>
                             </execution>
-
                             <!-- put the unversioned jar to the lib_release_unversioned_jar folder -->
                             <execution>
                                 <id>copy-unversioned</id>
@@ -310,16 +734,12 @@
                                         </artifactItem>
                                     </artifactItems>
                                 </configuration>
-
                             </execution>
-
                         </executions>
                     </plugin>
-
                 </plugins>
             </build>
         </profile>
-
         <profile>
             <id>init</id>
             <properties>
@@ -344,8 +764,7 @@
                                     <resources>
                                         <resource>
                                             <directory>${basedir}/src/main/templates</directory>
-                                            <!-- do not remove the includes element. It is necessary to copy 
-                                                even one module -->
+                                            <!-- do not remove the includes element. It is necessary to copy even one module -->
                                             <includes>
                                                 <include>**</include>
                                             </includes>
@@ -397,7 +816,6 @@
                 </plugins>
             </build>
         </profile>
-        
         <profile>
             <id>prepare-release</id>
             <properties>
@@ -479,7 +897,6 @@
                 </plugins>
             </build>
         </profile>
-
         <profile>
             <id>set-next-devel-iteration</id>
             <build>
@@ -531,25 +948,6 @@
             </build>
         </profile>
     </profiles>
-
-    <repositories>
-        <repository>
-            <id>eclipselink</id>
-            <name>EclipseLink Repository</name>
-            <url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo</url>
-        </repository>
-        <repository>
-            <id>swt-repo</id>
-            <name>swt repository</name>
-            <url>http://swt-repo.googlecode.com/svn/repo/</url>
-        </repository>
-        <repository>
-            <id>vaadin-addons</id>
-            <name>Addons for Vaadin Framework</name>
-            <url>http://maven.vaadin.com/vaadin-addons</url>
-        </repository>
-    </repositories>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -577,6 +975,409 @@
                 <artifactId>javassist</artifactId>
                 <version>3.15.0-GA</version>
             </dependency>
+           <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit-dep</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-core</artifactId>
+                <version>${hamcrest.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-library</artifactId>
+                <version>${hamcrest.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jul-to-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>log4j-over-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <!-- joda date & time support -->
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda.time.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time-hibernate</artifactId>
+                <version>${joda.time.hibernate.version}</version>
+            </dependency>
+            <!-- jackson support for serializing / deserializing -->
+            <dependency>
+                <groupId>org.codehaus.jackson</groupId>
+                <artifactId>jackson-jaxrs</artifactId>
+                <version>${jaxrs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-hibernate3</artifactId>
+                <version>${jackson.version.hibernate}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-joda</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <!-- hibernate libraries -->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate.javax.persistence</groupId>
+                <artifactId>hibernate-jpa-2.0-api</artifactId>
+                <version>${hibernate.jpa.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xerces</groupId>
+                <artifactId>xercesImpl</artifactId>
+                <version>${xerces.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${h2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.saxon</groupId>
+                <artifactId>Saxon-HE</artifactId>
+                <version>${saxon.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>mail</artifactId>
+                <version>${javax.mail.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>jcifs</groupId>
+                <artifactId>jcifs</artifactId>
+                <version>${jcifs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-all</artifactId>
+                <version>${apache.activemq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>webdavclient4j</groupId>
+                <artifactId>webdavclient4j-core</artifactId>
+                <version>${webdavclient4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.ethz.ganymed</groupId>
+                <artifactId>ganymed-ssh2</artifactId>
+                <version>${ganymed.ssh2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${apache.httpcomponents.httpclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.oracle</groupId>
+                <artifactId>ojdbc6</artifactId>
+                <version>${sos.ojdbc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.oracle</groupId>
+                <artifactId>ojdbc14</artifactId>
+                <version>10.2.0.5.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                <artifactId>jackson-jaxrs-json-provider</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.inject</groupId>
+                <artifactId>guice</artifactId>
+                <version>${google.inject.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.jersey</groupId>
+                <artifactId>jersey-client</artifactId>
+                <version>${jersey.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.jersey</groupId>
+                <artifactId>jersey-core</artifactId>
+                <version>${jersey.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.jersey</groupId>
+                <artifactId>jersey-server</artifactId>
+                <version>${jersey.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.jersey.contribs</groupId>
+                <artifactId>jersey-guice</artifactId>
+                <version>${jersey.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.findbugs</groupId>
+                <artifactId>jsr305</artifactId>
+                <version>${google.findbugs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${apache.commons.logging.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-httpclient</groupId>
+                <artifactId>commons-httpclient</artifactId>
+                <version>${apache.commons.httpclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${apache.commons.codec.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons.collections.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-cli</groupId>
+                <artifactId>commons-cli</artifactId>
+                <version>${commons.cli.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache.commons.lang.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${commons.beanutils.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-all</artifactId>
+                <version>${apache.shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>${dom4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jdom</groupId>
+                <artifactId>jdom</artifactId>
+                <version>${org.jdom.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${apache.poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>${javax.servlet.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xalan</groupId>
+                <artifactId>xalan</artifactId>
+                <version>${xalan.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <version>${xml.apis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-ext-jdk15on</artifactId>
+                <version>${bouncycastle.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lowagie</groupId>
+                <artifactId>itext</artifactId>
+                <version>${itext.version}</version>
+            </dependency>
+            <!-- GUI specific dependencies -->
+            <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-server</artifactId>
+                <version>${vaadin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-client-compiled</artifactId>
+                <version>${vaadin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-client</artifactId>
+                <version>${vaadin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-push</artifactId>
+                <version>${vaadin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-themes</artifactId>
+                <version>${vaadin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.swt</groupId>
+                <artifactId>org.eclipse.swt.${swtSuffix}</artifactId>
+                <version>${swt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.ui</groupId>
+                <artifactId>org.eclipse.ui.workbench</artifactId>
+                <version>${ui.workbench.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jface</groupId>
+                <artifactId>org.eclipse.jface</artifactId>
+                <version>${jface.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jface</groupId>
+                <artifactId>text</artifactId>
+                <version>${jface.text.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.core</groupId>
+                <artifactId>runtime</artifactId>
+                <version>${eclipse.core.runtime.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.core</groupId>
+                <artifactId>commands</artifactId>
+                <version>${eclipse.core.commands.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.equinox</groupId>
+                <artifactId>common</artifactId>
+                <version>${eclipse.equinox.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.trilead</groupId>
+                <artifactId>sos-trilead-ssh2</artifactId>
+                <version>${sos.trilead.ssh.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-net</groupId>
+                <artifactId>commons-net</artifactId>
+                <version>${apache.commons.net.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch</artifactId>
+                <version>${jcraft.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>antlr</groupId>
+                <artifactId>antlr</artifactId>
+                <version>${antlr.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.transaction</groupId>
+                <artifactId>jta</artifactId>
+                <version>${jta.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sourceforge.jtds</groupId>
+                <artifactId>jtds</artifactId>
+                <version>${jtds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.jasperreports</groupId>
+                <artifactId>jasperreports</artifactId>
+                <version>${jasperreports.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>slide</groupId>
+                <artifactId>slide-webdavlib</artifactId>
+                <version>${slide.webdavlib.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>jaxen</groupId>
+                <artifactId>jaxen</artifactId>
+                <version>${jaxen.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ldapjdk</groupId>
+                <artifactId>ldapjdk</artifactId>
+                <version>${ldap.jdk.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.apache.shiro</groupId>
                 <artifactId>shiro-core</artifactId>
@@ -589,4 +1390,91 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <!-- dependencies that will be available in any project -->
+    <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit-dep</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-library</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <!-- joda date & time support -->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!-- additional external repositories -->
+    <repositories>
+        <repository>
+            <id>eclipselink</id>
+            <name>EclipseLink Repository</name>
+            <url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo</url>
+        </repository>
+        <repository>
+            <id>swt-repo</id>
+            <name>swt repository</name>
+            <url>http://swt-repo.googlecode.com/svn/repo/</url>
+        </repository>
+        <repository>
+            <id>vaadin-addons</id>
+            <name>Addons for Vaadin Framework</name>
+            <url>http://maven.vaadin.com/vaadin-addons</url>
+        </repository>
+        <repository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>http://repo1.maven.org/maven2</url>
+        </repository>
+        <repository>
+            <id>FUSE</id>
+            <name>FUSE open source repository</name>
+            <url>http://repo.fusesource.com/maven2</url>
+        </repository>
+        <repository>
+            <id>java.net2</id>
+            <name>Java.net</name>
+            <url>https://oss.sonatype.org/content/repositories/java.net2</url>
+        </repository>
+        <repository>
+            <id>jboss3rd</id>
+            <name>JBoss Thirdparty Uploads</name>
+            <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-uploads</url>
+        </repository>
+        <repository>
+            <id>maven2-repository.dev.java.net</id>
+            <name>Java.net Repository for Maven 2</name>
+            <url>http://download.java.net/maven/2/</url>
+        </repository>
+        <repository>
+            <id>scala-tools.org</id>
+            <name>Scala-Tools Maven2 Repository</name>
+            <url>http://scala-tools.org/repo-releases</url>
+        </repository>
+    </repositories>
+
 </project>
