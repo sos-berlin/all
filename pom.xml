@@ -643,9 +643,9 @@
 		<profile>
 			<id>init</id>
 			<properties>
-				<versionBranch>release/1.9_TEST</versionBranch>
-				<releaseVersion>1.9.1.TEST</releaseVersion>
-				<snapshotVersion>1.9.2.TEST-SNAPSHOT</snapshotVersion>
+				<versionBranch>release/1.9</versionBranch>
+				<releaseVersion>1.9.1</releaseVersion>
+				<snapshotVersion>1.9.2-SNAPSHOT</snapshotVersion>
 			</properties>
 			<build>
 				<plugins>
@@ -720,9 +720,9 @@
 		<profile>
 			<id>prepare-release</id>
 			<properties>
-				<versionBranch>release/1.9_TEST</versionBranch>
-				<releaseVersion>1.9.1.TEST</releaseVersion>
-				<snapshotVersion>1.9.2.TEST-SNAPSHOT</snapshotVersion>
+				<versionBranch>release/1.9</versionBranch>
+				<releaseVersion>1.9.1</releaseVersion>
+				<snapshotVersion>1.9.2-SNAPSHOT</snapshotVersion>
 			</properties>
 			<build>
 				<plugins>
