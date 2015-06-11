@@ -34,7 +34,6 @@
 		<!-- The current encoding properties - should be changed to UTF-8 -->
 		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>Cp1252</project.reporting.outputEncoding>
-		<sos.test-resources.version>1.8.0</sos.test-resources.version>
 		<slf4j.version>1.7.10</slf4j.version>
 		<guava.version>18.0</guava.version>
 		<junit.version>4.11</junit.version>
@@ -877,11 +876,6 @@
                 <artifactId>engine-test</artifactId>
                 <version>${sos.engine.version}</version>
             </dependency>
-			<dependency>
-				<groupId>com.sos-berlin.sos-internal-test</groupId>
-				<artifactId>test-resources</artifactId>
-				<version>${sos.test-resources.version}</version>
-			</dependency>
 			<dependency>
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
