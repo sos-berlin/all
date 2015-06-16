@@ -5,7 +5,7 @@
 
 	<groupId>com.sos-berlin</groupId>
 	<artifactId>products</artifactId>
-	<version>1.10-SNAPSHOT</version>
+	<version>1.10.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
 	<inceptionYear>2014</inceptionYear>
@@ -97,7 +97,7 @@
 		<apache.poi.version>3.10-FINAL</apache.poi.version>
 		<google.inject.version>3.0</google.inject.version>
 		<google.findbugs.version>3.0.0</google.findbugs.version>
-		<jcraft.version>0.1.51</jcraft.version>
+		<jcraft.version>0.1.53</jcraft.version>
 		<!-- GUI specific dependencies -->
 		<swt.version>4.3</swt.version>
 		<ui.workbench.version>3.7.1.v20120104-1859</ui.workbench.version>
