@@ -772,8 +772,8 @@
             <id>init</id>
             <properties>
                 <versionBranch>release/1.7</versionBranch>
-                <releaseVersion>1.7.5.RC1</releaseVersion>
-                <snapshotVersion>1.7.5-SNAPSHOT</snapshotVersion>
+                <releaseVersion>1.7.6</releaseVersion>
+                <snapshotVersion>1.7.7-SNAPSHOT</snapshotVersion>
             </properties>
             <build>
                 <plugins>
@@ -848,8 +848,8 @@
             <id>prepare-release</id>
             <properties>
                 <versionBranch>release/1.7</versionBranch>
-                <releaseVersion>1.7.5.RC1</releaseVersion>
-                <snapshotVersion>1.7.5-SNAPSHOT</snapshotVersion>
+                <releaseVersion>1.7.6</releaseVersion>
+                <snapshotVersion>1.7.7-SNAPSHOT</snapshotVersion>
             </properties>
             <build>
                 <plugins>
