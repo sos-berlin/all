@@ -667,8 +667,8 @@
 			<id>init</id>
 			<properties>
 				<versionBranch>release/1.8</versionBranch>
-				<releaseVersion>1.8.1</releaseVersion>
-				<snapshotVersion>1.8.2-SNAPSHOT</snapshotVersion>
+				<releaseVersion>1.8.3</releaseVersion>
+				<snapshotVersion>1.8.4-SNAPSHOT</snapshotVersion>
 			</properties>
 			<build>
 				<plugins>
@@ -743,9 +743,9 @@
 		<profile>
 			<id>prepare-release</id>
 			<properties>
-				<versionBranch>master</versionBranch>
-				<releaseVersion>1.8.0</releaseVersion>
-				<snapshotVersion>1.8.1-SNAPSHOT</snapshotVersion>
+				<versionBranch>release/1.8</versionBranch>
+				<releaseVersion>1.8.3</releaseVersion>
+				<snapshotVersion>1.8.4-SNAPSHOT</snapshotVersion>
 			</properties>
 			<build>
 				<plugins>
