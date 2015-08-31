@@ -642,8 +642,8 @@
 			<id>init</id>
 			<properties>
 				<versionBranch>master</versionBranch>
-				<releaseVersion>1.9.1</releaseVersion>
-				<snapshotVersion>1.9.1-SNAPSHOT</snapshotVersion>
+				<releaseVersion>1.10.0-RC1</releaseVersion>
+				<snapshotVersion>1.10.0-SNAPSHOT</snapshotVersion>
 			</properties>
 			<build>
 				<plugins>
@@ -719,8 +719,8 @@
 			<id>prepare-release</id>
 			<properties>
 				<versionBranch>master</versionBranch>
-				<releaseVersion>1.9.1</releaseVersion>
-				<snapshotVersion>1.9.1-SNAPSHOT</snapshotVersion>
+				<releaseVersion>1.10.0-RC1</releaseVersion>
+				<snapshotVersion>1.10.0-SNAPSHOT</snapshotVersion>
 			</properties>
 			<build>
 				<plugins>
