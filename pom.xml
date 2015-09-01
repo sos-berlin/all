@@ -30,6 +30,9 @@
 
 	<properties>
 		<sos.engine.version>${project.version}</sos.engine.version>
+		<versionBranch>release/1.10</versionBranch>
+		<releaseVersion>1.10.0</releaseVersion>
+		<snapshotVersion>1.10.1-SNAPSHOT</snapshotVersion>
 		<project.base.path>${project.artifactId}</project.base.path>
 		<!-- The current encoding properties - should be changed to UTF-8 -->
 		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
@@ -640,11 +643,6 @@
 		</profile>
 		<profile>
 			<id>init</id>
-			<properties>
-				<versionBranch>release/1.10</versionBranch>
-				<releaseVersion>1.10.0-RC1</releaseVersion>
-				<snapshotVersion>1.10.0-SNAPSHOT</snapshotVersion>
-			</properties>
 			<build>
 				<plugins>
 					<plugin>
@@ -717,11 +715,6 @@
 		</profile>
 		<profile>
 			<id>prepare-release</id>
-			<properties>
-				<versionBranch>release/1.10</versionBranch>
-				<releaseVersion>1.10.0-RC1</releaseVersion>
-				<snapshotVersion>1.10.0-SNAPSHOT</snapshotVersion>
-			</properties>
 			<build>
 				<plugins>
 					<plugin>
