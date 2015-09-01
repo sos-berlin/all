@@ -641,7 +641,7 @@
 		<profile>
 			<id>init</id>
 			<properties>
-				<versionBranch>master</versionBranch>
+				<versionBranch>release/1.10</versionBranch>
 				<releaseVersion>1.10.0-RC1</releaseVersion>
 				<snapshotVersion>1.10.0-SNAPSHOT</snapshotVersion>
 			</properties>
@@ -718,7 +718,7 @@
 		<profile>
 			<id>prepare-release</id>
 			<properties>
-				<versionBranch>master</versionBranch>
+				<versionBranch>release/1.10</versionBranch>
 				<releaseVersion>1.10.0-RC1</releaseVersion>
 				<snapshotVersion>1.10.0-SNAPSHOT</snapshotVersion>
 			</properties>
