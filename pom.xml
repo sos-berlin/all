@@ -30,6 +30,9 @@
 
 	<properties>
 		<sos.engine.version>1.10.0-TEST</sos.engine.version>
+		<versionBranch>release/1.9_TEST</versionBranch>
+		<releaseVersion>1.9.1.TEST</releaseVersion>
+		<snapshotVersion>1.9.2.TEST-SNAPSHOT</snapshotVersion>
 		<project.base.path>${project.artifactId}</project.base.path>
 		<!-- The current encoding properties - should be changed to UTF-8 -->
 		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
@@ -412,7 +415,7 @@
 
 	<profiles>
         <profile>
-            <id>cleanup</id>
+            <id>delete-local-repository</id>
             <build>
                 <plugins>
 	                <!-- clean local repository once before build and log deleted files and folders -->
@@ -421,13 +424,12 @@
 		                <inherited>false</inherited>
 		                <executions>
 		                    <execution>
-		                        <id>clear-repo</id>
+		                        <id>delete-local-repository</id>
 		                        <phase>pre-clean</phase>
 		                        <goals>
 		                            <goal>run</goal>
 		                        </goals>
 		                        <configuration>
-		                            <skip>${skip.repo.clean}</skip>
 		                            <target name="clean-local-repo">                            
 		                                <echo>Purging ${settings.localRepository}/com/sos-berlin...</echo>
 		                                <delete dir="${settings.localRepository}/com/sos-berlin" verbose="true"/>
@@ -642,11 +644,6 @@
 		</profile>
 		<profile>
 			<id>init</id>
-			<properties>
-				<versionBranch>release/1.9_TEST</versionBranch>
-				<releaseVersion>1.9.1.TEST</releaseVersion>
-				<snapshotVersion>1.9.2.TEST-SNAPSHOT</snapshotVersion>
-			</properties>
 			<build>
 				<plugins>
 					<plugin>
@@ -719,11 +716,6 @@
 		</profile>
 		<profile>
 			<id>prepare-release</id>
-			<properties>
-				<versionBranch>release/1.9_TEST</versionBranch>
-				<releaseVersion>1.9.1.TEST</releaseVersion>
-				<snapshotVersion>1.9.2.TEST-SNAPSHOT</snapshotVersion>
-			</properties>
 			<build>
 				<plugins>
 					<plugin>
