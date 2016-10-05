@@ -53,6 +53,8 @@
 		<hibernate.jpa.version>1.0.1.Final</hibernate.jpa.version>
 		<jackson.version>2.4.3</jackson.version>
 		<jersey.version>1.19</jersey.version>
+		<jersey.sun.version>1.19</jersey.sun.version>
+		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
 		<!-- normally the version of ... is the same like jackson.version, but 
 			the current used version does not work for Feature.USE_TRANSIENT_ANNOTATION 
 			(see https://github.com/FasterXML/jackson-datatype-hibernate/issues/47 for 
@@ -61,7 +63,7 @@
 		<jackson.version.hibernate>${jackson.version}</jackson.version.hibernate>
 		<jaxrs.version>1.9.13</jaxrs.version>
 		<javax.servlet.version>3.0.1</javax.servlet.version>
-		<javassist.version>3.15.0-GA</javassist.version>
+		<javassist.version>3.21.0-GA</javassist.version>
 		<xerces.version>2.11.0</xerces.version>
 		<xalan.version>2.7.1</xalan.version>
 		<jta.version>1.1</jta.version>
@@ -1073,6 +1075,11 @@
 				<version>${jersey.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>org.glassfish.jersey.core</groupId>
+				<artifactId>jersey-client</artifactId>
+				<version>${jersey.glassfish.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>com.sun.jersey</groupId>
 				<artifactId>jersey-core</artifactId>
 				<version>${jersey.version}</version>
@@ -1081,6 +1088,16 @@
 				<groupId>com.sun.jersey</groupId>
 				<artifactId>jersey-server</artifactId>
 				<version>${jersey.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.glassfish.jersey.core</groupId>
+				<artifactId>jersey-server</artifactId>
+				<version>${jersey.glassfish.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.glassfish.jersey.media</groupId>
+				<artifactId>jersey-media-moxy</artifactId>
+				<version>${jersey.glassfish.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.sun.jersey.contribs</groupId>
