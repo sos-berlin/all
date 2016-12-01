@@ -22,7 +22,6 @@
 		<module>commons-jobscheduler</module>
 		<module>joe</module>
 		<module>jade</module>
-		<module>jid</module>
 		<module>jitl</module>
 		<module>joc</module>
 		<module>notification</module>
