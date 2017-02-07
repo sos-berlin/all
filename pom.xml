@@ -24,7 +24,7 @@
 		<module>jade</module>
 		<module>jitl</module>
 		<module>joc</module>
-		<module>notification</module>
+		<!--module>notification</module-->
 	</modules>
 
 	<properties>
