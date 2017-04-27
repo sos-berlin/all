@@ -30,8 +30,8 @@
 	<properties>
 		<sos.engine.version>${project.version}</sos.engine.version>
 		<versionBranch>master</versionBranch>
-		<releaseVersion>1.11.0</releaseVersion>
-		<snapshotVersion>1.11.1-SNAPSHOT</snapshotVersion>
+		<releaseVersion>1.12.0</releaseVersion>
+		<snapshotVersion>1.12.1-SNAPSHOT</snapshotVersion>
 		<project.base.path>${project.artifactId}</project.base.path>
 		<!-- The current encoding properties - should be changed to UTF-8 -->
 		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
@@ -51,8 +51,6 @@
         <c3p0.version>0.9.5.2</c3p0.version>
         <mchange.commons.version>0.2.11</mchange.commons.version>
 		<jackson.version>2.4.3</jackson.version>
-		<!--jersey.version>1.19</jersey.version>
-		<jersey.sun.version>1.19</jersey.sun.version-->
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
 		<!-- normally the version of ... is the same like jackson.version, but 
 			the current used version does not work for Feature.USE_TRANSIENT_ANNOTATION 
@@ -123,6 +121,7 @@
 		<postgresql.version>9.4-1201-jdbc4</postgresql.version>
 		<db2.jcc.version>1.3.1</db2.jcc.version>
 		<ini4j.version>0.5.2</ini4j.version>
+		<scala.base.version>2.11</scala.base.version>
 	</properties>
 	<prerequisites>
 		<maven>3.2.1</maven>
@@ -846,6 +845,7 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- JobScheduler Dependencies -->
             <dependency>
                 <groupId>com.sos-berlin.jobscheduler.engine</groupId>
                 <artifactId>engine-job-api</artifactId>
@@ -871,6 +871,77 @@
                 <artifactId>engine-test</artifactId>
                 <version>${sos.engine.version}</version>
             </dependency>
+	        <dependency>
+	            <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+	            <artifactId>base_${scala.base.version}</artifactId>
+	            <version>${sos.engine.version}</version>
+	        </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>agent-client_${scala.base.version}</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>tunnel-data_${scala.base.version}</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>http-server_${scala.base.version}</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>http-client_${scala.base.version}</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>agent-test_${scala.base.version}</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>agent_${scala.base.version}</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>agent-data_${scala.base.version}</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>shared_${scala.base.version}</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>taskserver_${scala.base.version}</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>taskserver-moduleapi_${scala.base.version}</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>minicom_${scala.base.version}</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>taskserver-dotnet_${scala.base.version}</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>tunnel_${scala.base.version}</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <!-- 3rd Party Dependencies -->
 			<dependency>
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
