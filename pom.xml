@@ -5,7 +5,7 @@
 
 	<groupId>com.sos-berlin</groupId>
 	<artifactId>products</artifactId>
-	<version>1.11.1-SNAPSHOT</version>
+	<version>1.11.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
 	<inceptionYear>2014</inceptionYear>
@@ -28,7 +28,7 @@
 
 	<properties>
 		<sos.engine.version>${project.version}</sos.engine.version>
-		<versionBranch>master</versionBranch>
+		<versionBranch>release/1.11</versionBranch>
 		<releaseVersion>1.11.2</releaseVersion>
 		<snapshotVersion>1.11.3-SNAPSHOT</snapshotVersion>
 		<project.base.path>${project.artifactId}</project.base.path>
