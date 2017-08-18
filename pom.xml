@@ -870,11 +870,16 @@
                 <artifactId>engine-test</artifactId>
                 <version>${sos.engine.version}</version>
             </dependency>
-	        <dependency>
-	            <groupId>com.sos-berlin.jobscheduler.engine</groupId>
-	            <artifactId>base_${scala.base.version}</artifactId>
-	            <version>${sos.engine.version}</version>
-	        </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>base_${scala.base.version}</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sos-berlin.jobscheduler.engine</groupId>
+                <artifactId>engine-base</artifactId>
+                <version>${sos.engine.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.sos-berlin.jobscheduler.engine</groupId>
                 <artifactId>agent-client_${scala.base.version}</artifactId>
