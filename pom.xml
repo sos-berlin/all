@@ -163,7 +163,8 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- copy the general doxygen configuration template and replace project specific properties -->
+			<!-- copy the general doxygen configuration template and replace project 
+				specific properties -->
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<executions>
@@ -331,7 +332,8 @@
 					<artifactId>maven-assembly-plugin</artifactId>
 					<version>2.4</version>
 				</plugin>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself. -->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -418,7 +420,8 @@
             <id>delete-local-repository</id>
             <build>
                 <plugins>
-	                <!-- clean local repository once before build and log deleted files and folders -->
+					<!-- clean local repository once before build and log deleted files 
+						and folders -->
 		            <plugin>
 		                <artifactId>maven-antrun-plugin</artifactId>
 		                <inherited>false</inherited>
@@ -432,7 +435,8 @@
 		                        <configuration>
 		                            <target name="clean-local-repo">                            
 		                                <echo>Purging ${settings.localRepository}/com/sos-berlin...</echo>
-		                                <delete dir="${settings.localRepository}/com/sos-berlin" verbose="true"/>
+										<delete dir="${settings.localRepository}/com/sos-berlin"
+											verbose="true" />
 		                            </target>
 		                            <failOnError>false</failOnError>
 		                        </configuration>
@@ -595,7 +599,8 @@
                 <swtSuffix>gtk.aix.ppc64</swtSuffix>
             </properties>
         </profile>
-        <!-- This profile is for collecting the sources of all artifacts in one jar (in the install phase). In case of deployment the sources will also deployed -->
+		<!-- This profile is for collecting the sources of all artifacts in one 
+			jar (in the install phase). In case of deployment the sources will also deployed -->
         <profile>
             <id>collect-sources</id>
             <build>
@@ -686,7 +691,8 @@
 							<inherited>false</inherited>
 	                        <configuration>
 								<target name="change-permission">
-									<chmod dir="${project.basedir}/generated" includes="*.sh" perm="775" />
+										<chmod dir="${project.basedir}/generated" includes="*.sh"
+											perm="775" />
 								</target>
 							</configuration>
 							</execution>
@@ -846,6 +852,11 @@
         <dependencies>
             <!-- JobScheduler Dependencies -->
             <dependency>
+				<groupId>org.apache.shiro.tools</groupId>
+				<artifactId>shiro-tools-hasher</artifactId>
+				<version>${shiro.tools.version}</version>
+			</dependency>
+			<dependency>
                 <groupId>com.sos-berlin.jobscheduler.engine</groupId>
                 <artifactId>engine-job-api</artifactId>
                 <version>${sos.engine.version}</version>
