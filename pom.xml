@@ -42,8 +42,8 @@
 		<hamcrest.version>1.3</hamcrest.version>
 		<log4j.version>1.2.16</log4j.version>
 		<logback.version>1.1.2</logback.version>
-		<joda.time.version>2.5</joda.time.version>
-		<joda.time.hibernate.version>1.3</joda.time.hibernate.version>
+		<joda.time.version>2.9.9</joda.time.version>
+		<!--joda.time.hibernate.version>1.3</joda.time.hibernate.version-->
 		<hibernate.version>5.2.6.Final</hibernate.version>
 		<hibernate.commons.annotation.version>5.0.1.Final</hibernate.commons.annotation.version>
 		<hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
@@ -1025,11 +1025,11 @@
 				<artifactId>joda-time</artifactId>
 				<version>${joda.time.version}</version>
 			</dependency>
-			<dependency>
+			<!--dependency>
 				<groupId>joda-time</groupId>
 				<artifactId>joda-time-hibernate</artifactId>
 				<version>${joda.time.hibernate.version}</version>
-			</dependency>
+			</dependency-->
 			<!-- jackson support for serializing / deserializing -->
 			<dependency>
 				<groupId>org.codehaus.jackson</groupId>
