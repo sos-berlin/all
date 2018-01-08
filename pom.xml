@@ -121,6 +121,7 @@
         <scala.base.version>2.11</scala.base.version>
         <shiro.tools.version>1.2.6</shiro.tools.version>
         <typesafe.config.version>1.3.0</typesafe.config.version>
+        <keepass.java2.version>2.1.1</keepass.java2.version>
     </properties>
     <prerequisites>
         <maven>3.2.1</maven>
@@ -1444,6 +1445,11 @@
                 <artifactId>javax.jms-api</artifactId>
                 <version>${javax.jms-api.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.linguafranca.pwdb</groupId>
+                <artifactId>KeePassJava2</artifactId>
+                <version>${keepass.java2.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -1507,11 +1513,6 @@
             <id>swt-repo</id>
             <name>swt repository</name>
             <url>http://swt-repo.googlecode.com/svn/repo/</url>
-        </repository>
-        <repository>
-            <id>vaadin-addons</id>
-            <name>Addons for Vaadin Framework</name>
-            <url>http://maven.vaadin.com/vaadin-addons</url>
         </repository>
         <repository>
             <id>jsendnsca</id>
