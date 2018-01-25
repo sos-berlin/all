@@ -1449,12 +1449,6 @@
                 <groupId>org.linguafranca.pwdb</groupId>
                 <artifactId>KeePassJava2</artifactId>
                 <version>${keepass.java2.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.jetbrains</groupId>
-                        <artifactId>annotations</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
         </dependencies>
     </dependencyManagement>
