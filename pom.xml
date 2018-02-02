@@ -49,7 +49,8 @@
         <hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
         <c3p0.version>0.9.5.2</c3p0.version>
         <mchange.commons.version>0.2.11</mchange.commons.version>
-        <jackson.version>2.4.3</jackson.version>
+        <jsonschema2pojo.version>0.5.1</jsonschema2pojo.version>
+        <jackson.version>2.9.4</jackson.version>
         <jersey.glassfish.version>2.22.2</jersey.glassfish.version>
         <!-- normally the version of ... is the same like jackson.version, 
             but the current used version does not work for Feature.USE_TRANSIENT_ANNOTATION 
@@ -324,6 +325,11 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>
                     <version>1.8</version>
+                </plugin>
+                <plugin>
+                	<groupId>org.jsonschema2pojo</groupId>
+					<artifactId>jsonschema2pojo-maven-plugin</artifactId>
+					<version>${jsonschema2pojo.version}</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-antrun-plugin</artifactId>
@@ -1043,6 +1049,11 @@
                 <version>${joda.time.hibernate.version}</version> </dependency -->
             <!-- jackson support for serializing / deserializing -->
             <dependency>
+                <groupId>org.jsonschema2pojo</groupId>
+				<artifactId>jsonschema2pojo-core</artifactId>
+				<version>${jsonschema2pojo.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.codehaus.jackson</groupId>
                 <artifactId>jackson-jaxrs</artifactId>
                 <version>${jaxrs.version}</version>
@@ -1060,6 +1071,11 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+    			<artifactId>jackson-dataformat-xml</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
             <dependency>
