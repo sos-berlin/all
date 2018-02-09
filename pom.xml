@@ -121,7 +121,7 @@
         <scala.base.version>2.11</scala.base.version>
         <shiro.tools.version>1.2.6</shiro.tools.version>
         <typesafe.config.version>1.3.0</typesafe.config.version>
-        <keepass.java2.version>2.1.1</keepass.java2.version>
+        <keepass.java2.version>2.1.4</keepass.java2.version>
     </properties>
     <prerequisites>
         <maven>3.2.1</maven>
