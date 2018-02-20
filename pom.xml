@@ -29,8 +29,8 @@
     <properties>
         <sos.engine.version>${project.version}</sos.engine.version>
         <versionBranch>release/1.12</versionBranch>
-        <releaseVersion>1.12.1-RC1</releaseVersion>
-        <snapshotVersion>1.12.1-SNAPSHOT</snapshotVersion>
+        <releaseVersion>1.12.1</releaseVersion>
+        <snapshotVersion>1.12.2-SNAPSHOT</snapshotVersion>
         <project.base.path>${project.artifactId}</project.base.path>
         <!-- The current encoding properties - should be changed to UTF-8 -->
         <project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
@@ -877,6 +877,12 @@
                 <groupId>com.sos-berlin.jobscheduler.engine</groupId>
                 <artifactId>engine-kernel</artifactId>
                 <version>${sos.engine.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.intellij</groupId>
+                        <artifactId>annotations</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>com.sos-berlin.jobscheduler.engine</groupId>
