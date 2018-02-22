@@ -1516,9 +1516,14 @@
             </snapshots>
         </repository>
         <repository>
-            <id>swt-repo</id>
-            <name>swt repository</name>
-            <url>https://github.com/maven-eclipse/swt-repo</url>
+            <id>maven-eclipse-repo</id>
+            <name>swt-repo</name>
+            <url>http://maven-eclipse.github.io/maven</url>
+        </repository>
+        <repository>
+            <id>swt-repo2</id>
+            <name>swt-repo2</name>
+            <url>https://github.com/maven-eclipse/swt-repo/raw/master</url>
         </repository>
         <repository>
             <id>jsendnsca</id>
