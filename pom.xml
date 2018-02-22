@@ -1445,11 +1445,16 @@
 				<updatePolicy>never</updatePolicy>
 			</snapshots>
 		</repository>
-		<repository>
-			<id>swt-repo</id>
-			<name>swt repository</name>
-			<url>https://github.com/maven-eclipse/swt-repo</url>
-		</repository>
+        <repository>
+            <id>maven-eclipse-repo</id>
+            <name>swt-repo</name>
+            <url>http://maven-eclipse.github.io/maven</url>
+        </repository>
+        <repository>
+            <id>swt-repo2</id>
+            <name>swt-repo2</name>
+            <url>https://github.com/maven-eclipse/swt-repo/raw/master</url>
+        </repository>
 		<repository>
 			<id>vaadin-addons</id>
 			<name>Addons for Vaadin Framework</name>
