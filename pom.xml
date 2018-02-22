@@ -1448,7 +1448,7 @@
 		<repository>
 			<id>swt-repo</id>
 			<name>swt repository</name>
-			<url>http://swt-repo.googlecode.com/svn/repo/</url>
+			<url>https://github.com/maven-eclipse/swt-repo</url>
 		</repository>
 		<repository>
 			<id>vaadin-addons</id>
