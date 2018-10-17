@@ -50,14 +50,8 @@
 		<hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
 		<c3p0.version>0.9.5.2</c3p0.version>
 		<mchange.commons.version>0.2.11</mchange.commons.version>
-		<jackson.version>2.4.3</jackson.version>
+		<jackson.version>2.9.7</jackson.version>
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
-		<!-- normally the version of ... is the same like jackson.version, but 
-			the current used version does not work for Feature.USE_TRANSIENT_ANNOTATION 
-			(see https://github.com/FasterXML/jackson-datatype-hibernate/issues/47 for 
-			details) -->
-		<!-- jackson.version.hibernate>2.3.1</jackson.version.hibernate -->
-		<jackson.version.hibernate>${jackson.version}</jackson.version.hibernate>
 		<classmate.version>1.3.0</classmate.version>
 		<jaxrs.version>1.9.13</jaxrs.version>
 		<javax.servlet.version>3.0.1</javax.servlet.version>
@@ -1066,11 +1060,6 @@
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-annotations</artifactId>
 				<version>${jackson.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.fasterxml.jackson.datatype</groupId>
-				<artifactId>jackson-datatype-hibernate3</artifactId>
-				<version>${jackson.version.hibernate}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.fasterxml.jackson.datatype</groupId>
