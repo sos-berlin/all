@@ -648,8 +648,8 @@
 			<id>init</id>
 			<properties>
 				<versionBranch>release/1.9</versionBranch>
-				<releaseVersion>1.9.13</releaseVersion>
-				<snapshotVersion>1.9.14-SNAPSHOT</snapshotVersion>
+				<releaseVersion>1.9.14</releaseVersion>
+				<snapshotVersion>1.9.15-SNAPSHOT</snapshotVersion>
 			</properties>
 			<build>
 				<plugins>
@@ -725,8 +725,8 @@
 			<id>prepare-release</id>
 			<properties>
 				<versionBranch>release/1.9</versionBranch>
-				<releaseVersion>1.9.13</releaseVersion>
-				<snapshotVersion>1.9.14-SNAPSHOT</snapshotVersion>
+				<releaseVersion>1.9.14</releaseVersion>
+				<snapshotVersion>1.9.15-SNAPSHOT</snapshotVersion>
 			</properties>
 			<build>
 				<plugins>
@@ -989,7 +989,7 @@
 			</dependency>
 			<dependency>
 				<groupId>com.fasterxml.jackson.datatype</groupId>
-				<artifactId>jackson-datatype-hibernate3</artifactId>
+				<artifactId>jackson-datatype-hibernate5</artifactId>
 				<version>${jackson.version.hibernate}</version>
 			</dependency>
 			<dependency>
