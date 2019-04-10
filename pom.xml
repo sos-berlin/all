@@ -119,7 +119,8 @@
 		<shiro.tools.version>1.2.6</shiro.tools.version>
 		<typesafe.config.version>1.3.0</typesafe.config.version>
 		<keepass.java2.version>2.1.4</keepass.java2.version>
-		<jaxb.version>2.3.0</jaxb.version>
+		<jaxb.version>2.4.0-b180830.0438</jaxb.version>
+		<jaxb.api.version>2.4.0-b180830.0359</jaxb.api.version>
 		<activation.version>1.1.1</activation.version>
         <txtmark.version>0.13</txtmark.version>
 	</properties>
@@ -1461,7 +1462,7 @@
 			<dependency>
 				<groupId>javax.xml.bind</groupId>
 				<artifactId>jaxb-api</artifactId>
-				<version>${jaxb.version}</version>
+				<version>${jaxb.api.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.sun.xml.bind</groupId>
@@ -1469,6 +1470,11 @@
 				<version>${jaxb.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>org.glassfish.jaxb</groupId>
+				<artifactId>jaxb-bom</artifactId>
+				<version>${jaxb.version}</version>
+			</dependency>
+            <dependency>
 				<groupId>org.glassfish.jaxb</groupId>
 				<artifactId>jaxb-runtime</artifactId>
 				<version>${jaxb.version}</version>
