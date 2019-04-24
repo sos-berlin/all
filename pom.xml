@@ -47,7 +47,7 @@
 		<hibernate.version>5.2.6.Final</hibernate.version>
 		<hibernate.commons.annotation.version>5.0.1.Final</hibernate.commons.annotation.version>
 		<hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
-		<c3p0.version>0.9.5.2</c3p0.version>
+		<c3p0.version>0.9.5.4</c3p0.version>
 		<mchange.commons.version>0.2.11</mchange.commons.version>
 		<jackson.version>2.9.8</jackson.version>
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
