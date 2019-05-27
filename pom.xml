@@ -49,7 +49,7 @@
 		<hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mchange.commons.version>0.2.11</mchange.commons.version>
-		<jackson.version>2.9.8</jackson.version>
+		<jackson.version>2.9.9</jackson.version>
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
 		<classmate.version>1.3.0</classmate.version>
 		<jaxrs.version>1.9.13</jaxrs.version>
@@ -98,6 +98,9 @@
 		<google.findbugs.version>3.0.0</google.findbugs.version>
 		<jcraft.version>0.1.53</jcraft.version>
 		<jcraft.jzlib.version>1.1.3</jcraft.jzlib.version>
+        <jcraft.agent.proxy.version>0.0.4</jcraft.agent.proxy.version>
+        <jcraft.agentproxy.connector.factory.version>0.0.9</jcraft.agentproxy.connector.factory.version>
+        <jcraft.111.bugfix.version>1.0.0</jcraft.111.bugfix.version>
 		<!-- GUI specific dependencies -->
 		<swt.version>4.3</swt.version>
 		<ui.workbench.version>3.7.1.v20120104-1859</ui.workbench.version>
@@ -1350,6 +1353,21 @@
 				<artifactId>jzlib</artifactId>
 				<version>${jcraft.jzlib.version}</version>
 			</dependency>
+            <dependency>
+                <groupId>jsch-agent-proxy</groupId>
+                <artifactId>jsch-agent-proxy</artifactId>
+                <version>${jcraft.agent.proxy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch.agentproxy.connector-factory</artifactId>
+                <version>${jcraft.agentproxy.connector.factory.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jurr.jsch</groupId>
+                <artifactId>jsch-111-bugfix</artifactId>
+                <version>${jcraft.111.bugfix.version}</version>
+            </dependency>
 			<dependency>
 				<groupId>antlr</groupId>
 				<artifactId>antlr</artifactId>
