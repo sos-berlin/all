@@ -55,7 +55,7 @@
 		<jaxrs.version>1.9.13</jaxrs.version>
 		<javax.servlet.version>3.0.1</javax.servlet.version>
 		<javax.jms-api.version>2.0.1</javax.jms-api.version>
-		<javassist.version>3.21.0-GA</javassist.version>
+		<javassist.version>3.25.0-GA</javassist.version>
 		<xerces.version>2.11.0</xerces.version>
 		<xalan.version>2.7.1</xalan.version>
 		<jta.version>1.1</jta.version>
