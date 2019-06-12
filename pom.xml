@@ -50,7 +50,10 @@
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mchange.commons.version>0.2.11</mchange.commons.version>
 		<jackson.version>2.9.9</jackson.version>
+		<woodstox.version>5.2.0</woodstox.version>
+		<stax2.version>4.2</stax2.version>
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
+		<org.json.version>20140107</org.json.version>
 		<classmate.version>1.3.0</classmate.version>
 		<jaxrs.version>1.9.13</jaxrs.version>
 		<javax.servlet.version>3.0.1</javax.servlet.version>
@@ -101,6 +104,7 @@
         <jcraft.agent.proxy.version>0.0.4</jcraft.agent.proxy.version>
         <jcraft.agentproxy.connector.factory.version>0.0.9</jcraft.agentproxy.connector.factory.version>
         <jcraft.111.bugfix.version>1.0.0</jcraft.111.bugfix.version>
+        <jna.version>4.5.2</jna.version>
 		<!-- GUI specific dependencies -->
 		<swt.version>4.3</swt.version>
 		<ui.workbench.version>3.7.1.v20120104-1859</ui.workbench.version>
@@ -1028,6 +1032,17 @@
 				<artifactId>slf4j-nop</artifactId>
 				<version>${slf4j.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.json</groupId>
+				<artifactId>json</artifactId>
+				<version>${org.json.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>javax.servlet</groupId>
+						<artifactId>servlet-api</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
 			 
 			<!-- joda date & time support -->
 			<dependency>
@@ -1047,16 +1062,34 @@
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-core</artifactId>
 				<version>${jackson.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>javax.servlet</groupId>
+						<artifactId>servlet-api</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-databind</artifactId>
 				<version>${jackson.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>javax.servlet</groupId>
+						<artifactId>servlet-api</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-annotations</artifactId>
 				<version>${jackson.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>javax.servlet</groupId>
+						<artifactId>servlet-api</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.fasterxml.jackson.datatype</groupId>
@@ -1067,6 +1100,30 @@
 				<groupId>com.fasterxml.jackson.dataformat</groupId>
 				<artifactId>jackson-dataformat-xml</artifactId>
 				<version>${jackson.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>javax.servlet</groupId>
+						<artifactId>servlet-api</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>com.fasterxml.woodstox</groupId>
+						<artifactId>woodstox-core</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.codehaus.woodstox</groupId>
+						<artifactId>stax2-api</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.woodstox</groupId>
+				<artifactId>woodstox-core</artifactId>
+				<version>${woodstox.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.codehaus.woodstox</groupId>
+				<artifactId>stax2-api</artifactId>
+				<version>${stax2.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.fasterxml</groupId>
@@ -1195,6 +1252,12 @@
 				<groupId>org.glassfish.jersey.media</groupId>
 				<artifactId>jersey-media-moxy</artifactId>
 				<version>${jersey.glassfish.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>javax.servlet</groupId>
+						<artifactId>servlet-api</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.google.code.findbugs</groupId>
@@ -1230,6 +1293,12 @@
 				<groupId>commons-lang</groupId>
 				<artifactId>commons-lang</artifactId>
 				<version>${commons.lang.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>javax.servlet</groupId>
+						<artifactId>servlet-api</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.commons</groupId>
@@ -1362,7 +1431,27 @@
                 <groupId>com.jcraft</groupId>
                 <artifactId>jsch.agentproxy.connector-factory</artifactId>
                 <version>${jcraft.agentproxy.connector.factory.version}</version>
+                <exclusions>
+					<exclusion>
+						<groupId>net.java.dev.jna</groupId>
+						<artifactId>jna</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>net.java.dev.jna</groupId>
+						<artifactId>jna-platform</artifactId>
+					</exclusion>
+				</exclusions>
             </dependency>
+            <dependency>
+				<groupId>net.java.dev.jna</groupId>
+				<artifactId>jna</artifactId>
+				<version>${jna.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.java.dev.jna</groupId>
+				<artifactId>jna-platform</artifactId>
+				<version>${jna.version}</version>
+			</dependency>
             <dependency>
                 <groupId>org.jurr.jsch</groupId>
                 <artifactId>jsch-111-bugfix</artifactId>
@@ -1580,6 +1669,11 @@
 			<id>jsendnsca</id>
 			<name>pentaho googlecode jsendnsca Repository</name>
 			<url>https://public.nexus.pentaho.org/content/groups/omni</url>
+		</repository>
+		<repository>
+			<id>intern</id>
+			<name>SOS Repository</name>
+			<url>http://archiva.sos:8080/archiva/repository/sos</url>
 		</repository>
 	</repositories>
 </project>
