@@ -51,7 +51,7 @@
 		<hibernate.commons.annotation.version>3.2.0.Final</hibernate.commons.annotation.version>
 		<!-- hibernate.version>4.3.5.Final</hibernate.version -->
 		<hibernate.jpa.version>1.0.1.Final</hibernate.jpa.version>
-		<jackson.version>2.4.3</jackson.version>
+		<jackson.version>2.9.9</jackson.version>
 		<jersey.version>1.19</jersey.version>
 		<!-- normally the version of ... is the same like jackson.version, but 
 			the current used version does not work for Feature.USE_TRANSIENT_ANNOTATION 
