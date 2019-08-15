@@ -30,8 +30,8 @@
 	<properties>
 		<sos.engine.version>${project.version}</sos.engine.version>
 		<versionBranch>release/1.12</versionBranch>
-		<releaseVersion>1.12.9</releaseVersion>
-		<snapshotVersion>1.12.10-SNAPSHOT</snapshotVersion>
+		<releaseVersion>1.12.10</releaseVersion>
+		<snapshotVersion>1.12.11-SNAPSHOT</snapshotVersion>
 		<project.base.path>${project.artifactId}</project.base.path>
 		<!-- The current encoding properties - should be changed to UTF-8 -->
 		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
