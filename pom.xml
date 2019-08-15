@@ -6,7 +6,7 @@
 
 	<groupId>com.sos-berlin</groupId>
 	<artifactId>products</artifactId>
-	<version>1.12.10-SNAPSHOT</version>
+	<version>1.12.10</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
 	<inceptionYear>2014</inceptionYear>
