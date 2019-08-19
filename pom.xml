@@ -28,7 +28,7 @@
 	</modules>
 
 	<properties>
-        <sos.engine.version>1.12.10-SNAPSHOT</sos.engine.version>
+        <sos.engine.version>${project.version}</sos.engine.version>
         <versionBranch>master</versionBranch>
         <releaseVersion>1.13.0</releaseVersion>
         <snapshotVersion>1.13.1-SNAPSHOT</snapshotVersion>
