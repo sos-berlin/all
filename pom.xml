@@ -28,7 +28,8 @@
 	</modules>
 
 	<properties>
-        <sos.engine.version>${project.version}</sos.engine.version>
+        <!-- sos.engine.version>${project.version}</sos.engine.version -->
+        <sos.engine.version>1.13.0</sos.engine.version>
         <versionBranch>release/1.13</versionBranch>
         <releaseVersion>1.13.1</releaseVersion>
         <snapshotVersion>1.13.1-SNAPSHOT</snapshotVersion>
@@ -131,6 +132,7 @@
 		<jaxb.api.version>2.4.0-b180830.0359</jaxb.api.version>
 		<activation.version>1.1.1</activation.version>
         <txtmark.version>0.13</txtmark.version>
+        <jsonschema2pojo.core.version>0.5.1</jsonschema2pojo.core.version>
 	</properties>
 	<prerequisites>
 		<maven>3.2.1</maven>
@@ -335,7 +337,7 @@
 				<plugin>
                 	<groupId>org.jsonschema2pojo</groupId>
 					<artifactId>jsonschema2pojo-maven-plugin</artifactId>
-					<version>${jsonschema2pojo.version}</version>
+					<version>0.4.23</version>
                 </plugin>
                 <plugin>
 					<artifactId>maven-antrun-plugin</artifactId>
@@ -1062,7 +1064,7 @@
 			<dependency>
                 <groupId>org.jsonschema2pojo</groupId>
 				<artifactId>jsonschema2pojo-core</artifactId>
-				<version>${jsonschema2pojo.version}</version>
+				<version>${jsonschema2pojo.core.version}</version>
             </dependency>
             <dependency>
 				<groupId>org.codehaus.jackson</groupId>
