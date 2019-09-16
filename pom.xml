@@ -102,7 +102,6 @@
 		<google.findbugs.version>3.0.0</google.findbugs.version>
 		<jcraft.version>0.1.53</jcraft.version>
 		<jcraft.jzlib.version>1.1.3</jcraft.jzlib.version>
-        <jcraft.agent.proxy.version>0.0.4</jcraft.agent.proxy.version>
         <jcraft.agentproxy.connector.factory.version>0.0.9</jcraft.agentproxy.connector.factory.version>
         <jcraft.111.bugfix.version>1.0.0</jcraft.111.bugfix.version>
         <jna.version>4.5.2</jna.version>
@@ -1424,9 +1423,19 @@
 				<version>${jcraft.jzlib.version}</version>
 			</dependency>
             <dependency>
-                <groupId>jsch-agent-proxy</groupId>
-                <artifactId>jsch-agent-proxy</artifactId>
-                <version>${jcraft.agent.proxy.version}</version>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch.agentproxy.core</artifactId>
+                <version>${jcraft.agentproxy.connector.factory.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch.agentproxy.jsch</artifactId>
+                <version>${jcraft.agentproxy.connector.factory.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch.agentproxy.sshagent</artifactId>
+                <version>${jcraft.agentproxy.connector.factory.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.jcraft</groupId>
