@@ -28,10 +28,10 @@
 	</modules>
 
 	<properties>
-        <sos.engine.version>1.12.10-SNAPSHOT</sos.engine.version>
+        <sos.engine.version>${project.version}</sos.engine.version>
         <versionBranch>master</versionBranch>
-        <releaseVersion>1.13.0</releaseVersion>
-        <snapshotVersion>1.13.1-SNAPSHOT</snapshotVersion>
+        <releaseVersion>1.14.0</releaseVersion>
+        <snapshotVersion>1.14.1-SNAPSHOT</snapshotVersion>
 		<project.base.path>${project.artifactId}</project.base.path>
 		<!-- The current encoding properties - should be changed to UTF-8 -->
 		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
@@ -50,7 +50,7 @@
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mchange.commons.version>0.2.11</mchange.commons.version>
         <jackson.version>2.9.9</jackson.version>
-        <jackson.databind.version>2.9.9.2</jackson.databind.version>
+        <jackson.databind.version>2.9.10</jackson.databind.version>
 		<woodstox.version>5.2.0</woodstox.version>
 		<stax2.version>4.2</stax2.version>
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
@@ -102,7 +102,6 @@
 		<google.findbugs.version>3.0.0</google.findbugs.version>
 		<jcraft.version>0.1.53</jcraft.version>
 		<jcraft.jzlib.version>1.1.3</jcraft.jzlib.version>
-        <jcraft.agent.proxy.version>0.0.4</jcraft.agent.proxy.version>
         <jcraft.agentproxy.connector.factory.version>0.0.9</jcraft.agentproxy.connector.factory.version>
         <jcraft.111.bugfix.version>1.0.0</jcraft.111.bugfix.version>
         <jna.version>4.5.2</jna.version>
@@ -131,6 +130,7 @@
 		<jaxb.api.version>2.4.0-b180830.0359</jaxb.api.version>
 		<activation.version>1.1.1</activation.version>
         <txtmark.version>0.13</txtmark.version>
+        <jsonschema2pojo.core.version>0.5.1</jsonschema2pojo.core.version>
 	</properties>
 	<prerequisites>
 		<maven>3.2.1</maven>
@@ -335,7 +335,7 @@
 				<plugin>
                 	<groupId>org.jsonschema2pojo</groupId>
 					<artifactId>jsonschema2pojo-maven-plugin</artifactId>
-					<version>${jsonschema2pojo.version}</version>
+					<version>0.5.1</version>
                 </plugin>
                 <plugin>
 					<artifactId>maven-antrun-plugin</artifactId>
@@ -1062,7 +1062,7 @@
 			<dependency>
                 <groupId>org.jsonschema2pojo</groupId>
 				<artifactId>jsonschema2pojo-core</artifactId>
-				<version>${jsonschema2pojo.version}</version>
+				<version>${jsonschema2pojo.core.version}</version>
             </dependency>
             <dependency>
 				<groupId>org.codehaus.jackson</groupId>
@@ -1097,17 +1097,6 @@
                 <version>${jackson.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.fasterxml.jackson.dataformat</groupId>
-    			<artifactId>jackson-dataformat-xml</artifactId>
-				<version>${jackson.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>javax.servlet</groupId>
-						<artifactId>servlet-api</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
 				<groupId>com.fasterxml.jackson.datatype</groupId>
 				<artifactId>jackson-datatype-joda</artifactId>
 				<version>${jackson.version}</version>
@@ -1444,9 +1433,19 @@
 				<version>${jcraft.jzlib.version}</version>
 			</dependency>
             <dependency>
-                <groupId>jsch-agent-proxy</groupId>
-                <artifactId>jsch-agent-proxy</artifactId>
-                <version>${jcraft.agent.proxy.version}</version>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch.agentproxy.core</artifactId>
+                <version>${jcraft.agentproxy.connector.factory.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch.agentproxy.jsch</artifactId>
+                <version>${jcraft.agentproxy.connector.factory.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch.agentproxy.sshagent</artifactId>
+                <version>${jcraft.agentproxy.connector.factory.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.jcraft</groupId>
