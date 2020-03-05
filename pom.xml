@@ -50,11 +50,10 @@
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mchange.commons.version>0.2.11</mchange.commons.version>
         <jackson.version>2.9.9</jackson.version>
-        <jackson.databind.version>2.9.10.1</jackson.databind.version>
+        <jackson.databind.version>2.9.10.3</jackson.databind.version>
 		<woodstox.version>5.2.0</woodstox.version>
 		<stax2.version>4.2</stax2.version>
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
-		<org.json.version>20140107</org.json.version>
 		<classmate.version>1.3.0</classmate.version>
 		<jaxrs.version>1.9.13</jaxrs.version>
 		<javax.servlet.version>3.0.1</javax.servlet.version>
@@ -96,7 +95,7 @@
 		<commons.collections.version>3.1</commons.collections.version>
 		<commons.cli.version>1.2</commons.cli.version>
 		<commons.lang.version>2.4</commons.lang.version>
-		<commons.beanutils.version>1.8.3</commons.beanutils.version>
+		<commons.beanutils.version>1.9.4</commons.beanutils.version>
 		<apache.poi.version>3.10-FINAL</apache.poi.version>
 		<google.inject.version>4.2.0</google.inject.version>
 		<google.findbugs.version>3.0.0</google.findbugs.version>
@@ -1042,17 +1041,6 @@
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
 				<version>${slf4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.json</groupId>
-				<artifactId>json</artifactId>
-				<version>${org.json.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>javax.servlet</groupId>
-						<artifactId>servlet-api</artifactId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			 
 			<!-- joda date & time support -->
