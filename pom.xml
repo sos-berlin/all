@@ -6,7 +6,7 @@
 
 	<groupId>com.sos-berlin</groupId>
 	<artifactId>products</artifactId>
-        <version>1.13.3</version>
+        <version>1.13.3-patch</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
 	<inceptionYear>2014</inceptionYear>
@@ -28,10 +28,10 @@
 	</modules>
 
 	<properties>
-        <sos.engine.version>${project.version}</sos.engine.version>
+        <sos.engine.version>1.13.3</sos.engine.version>
         <versionBranch>release/1.13</versionBranch>
-        <releaseVersion>1.13.3</releaseVersion>
-        <snapshotVersion>1.13.4-SNAPSHOT</snapshotVersion>
+        <releaseVersion>1.13.3-patch</releaseVersion>
+        <snapshotVersion>1.13.3-patch2</snapshotVersion>
 		<project.base.path>${project.artifactId}</project.base.path>
 		<!-- The current encoding properties - should be changed to UTF-8 -->
 		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
