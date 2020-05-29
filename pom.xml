@@ -6,7 +6,7 @@
 
 	<groupId>com.sos-berlin</groupId>
 	<artifactId>products</artifactId>
-        <version>1.13.4-SNAPSHOT</version>
+    <version>1.13.4-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
 	<inceptionYear>2014</inceptionYear>
@@ -875,11 +875,23 @@
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>engine-job-api</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.enginedoc</groupId>
 				<artifactId>enginedoc-common</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
@@ -896,86 +908,188 @@
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>engine-common</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>engine-test</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>base_${scala.base.version}</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>engine-base</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>agent-client_${scala.base.version}</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>tunnel-data_${scala.base.version}</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>http-server_${scala.base.version}</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>http-client_${scala.base.version}</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>agent-test_${scala.base.version}</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>agent_${scala.base.version}</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>agent-data_${scala.base.version}</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>shared_${scala.base.version}</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>taskserver_${scala.base.version}</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>taskserver-moduleapi_${scala.base.version}</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>minicom_${scala.base.version}</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>taskserver-dotnet_${scala.base.version}</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.sos-berlin.jobscheduler.engine</groupId>
 				<artifactId>tunnel_${scala.base.version}</artifactId>
 				<version>${sos.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.intellij</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<!-- 3rd Party Dependencies -->
 			<dependency>
