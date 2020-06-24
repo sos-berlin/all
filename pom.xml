@@ -30,8 +30,8 @@
 	<properties>
         <sos.engine.version>${project.version}</sos.engine.version>
         <versionBranch>release/1.13</versionBranch>
-        <releaseVersion>1.13.4</releaseVersion>
-        <snapshotVersion>1.13.5-SNAPSHOT</snapshotVersion>
+        <releaseVersion>1.13.5</releaseVersion>
+        <snapshotVersion>1.13.6-SNAPSHOT</snapshotVersion>
 		<project.base.path>${project.artifactId}</project.base.path>
 		<!-- The current encoding properties - should be changed to UTF-8 -->
 		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
@@ -50,7 +50,7 @@
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mchange.commons.version>0.2.11</mchange.commons.version>
         <jackson.version>2.9.9</jackson.version>
-        <jackson.databind.version>2.9.10.4</jackson.databind.version>
+        <jackson.databind.version>2.9.10.5</jackson.databind.version>
 		<woodstox.version>5.2.0</woodstox.version>
 		<stax2.version>4.2</stax2.version>
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
