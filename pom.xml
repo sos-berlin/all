@@ -45,7 +45,8 @@
 		<log4j.version>2.13.2</log4j.version>
 		<joda.time.version>2.9.9</joda.time.version>
 		<!--joda.time.hibernate.version>1.3</joda.time.hibernate.version -->
-		<hibernate.version>5.2.6.Final</hibernate.version>
+        <!--hibernate.version>5.2.6.Final</hibernate.version-->
+        <hibernate.version>5.4.19.Final</hibernate.version>
 		<hibernate.commons.annotation.version>5.0.1.Final</hibernate.commons.annotation.version>
 		<hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
 		<c3p0.version>0.9.5.4</c3p0.version>
@@ -64,8 +65,10 @@
 		<xalan.version>2.7.1</xalan.version>
 		<jta.version>1.1</jta.version>
 		<maria.db.driver.version>1.3.0</maria.db.driver.version>
-		<jcifs-ng.version>2.1.5</jcifs-ng.version>
-		<dom4j.version>1.6.1</dom4j.version>
+        <!--jcifs-ng.version>2.1.5</jcifs-ng.version-->
+        <jcifs-ng.version>2.0.8</jcifs-ng.version>
+        <!--dom4j.version>1.6.1</dom4j.version-->
+        <dom4j.version>2.1.3</dom4j.version>
 		<org.jdom.version>1.1</org.jdom.version>
 		<jasperreports.version>3.7.2</jasperreports.version>
 		<h2.version>1.3.170</h2.version>
@@ -77,8 +80,8 @@
 		<apache.httpcomponents.httpclient.version>4.5.2</apache.httpcomponents.httpclient.version>
 		<slide.webdavlib.version>2.1</slide.webdavlib.version>
 		<jaxen.version>1.1.1</jaxen.version>
-        <!--bouncycastle.version>1.50</bouncycastle.version-->
-        <bouncycastle.version>1.66</bouncycastle.version>
+        <!--bouncycastle.version>1.66</bouncycastle.version-->
+        <bouncycastle.version>1.54</bouncycastle.version>
 		<itext.version>1.3</itext.version>
 		<jsoup.version>1.6.3</jsoup.version>
 		<!-- This is explicitly not the newest version, because it causes a java.lang.NoClassDefFoundError 
@@ -125,7 +128,8 @@
 		<shiro.tools.version>1.2.6</shiro.tools.version>
 		<typesafe.config.version>1.3.0</typesafe.config.version>
 		<keepass.java2.version>2.1.4</keepass.java2.version>
-		<jaxb.version>2.4.0-b180830.0438</jaxb.version>
+        <jaxb.version>2.4.0-b180830.0438</jaxb.version>
+        <!--jaxb.version>2.3.3</jaxb.version-->
 		<jaxb.api.version>2.4.0-b180830.0359</jaxb.api.version>
 		<activation.version>1.1.1</activation.version>
         <txtmark.version>0.13</txtmark.version>
@@ -1442,11 +1446,11 @@
 				<artifactId>commons-csv</artifactId>
 				<version>${apache.commons.csv.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>dom4j</groupId>
-				<artifactId>dom4j</artifactId>
-				<version>${dom4j.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>org.dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>${dom4j.version}</version>
+            </dependency>
 			<dependency>
 				<groupId>org.jdom</groupId>
 				<artifactId>jdom</artifactId>
@@ -1624,6 +1628,10 @@
 						<groupId>jdom</groupId>
 						<artifactId>jdom</artifactId>
 					</exclusion>
+                    <exclusion>
+                        <groupId>dom4j</groupId>
+                        <artifactId>dom4j</artifactId>
+                    </exclusion>
 				</exclusions>
 			</dependency>
 			<dependency>
