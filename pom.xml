@@ -29,7 +29,7 @@
 
 	<properties>
         <sos.engine.version>1.13.6</sos.engine.version>
-        <versionBranch>release/patch-1.13.6</versionBranch>
+        <versionBranch>patch-1.13.6</versionBranch>
         <releaseVersion>1.13.6-patch</releaseVersion>
         <snapshotVersion>1.13.6-patch2-SNAPSHOT</snapshotVersion>
 		<project.base.path>${project.artifactId}</project.base.path>
