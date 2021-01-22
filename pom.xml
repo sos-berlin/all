@@ -48,6 +48,7 @@
         <hibernate.version>5.4.19.Final</hibernate.version>
 		<hibernate.commons.annotation.version>5.0.1.Final</hibernate.commons.annotation.version>
 		<hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
+		<hikari.version>3.4.5</hikari.version>
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mchange.commons.version>0.2.11</mchange.commons.version>
         <jackson.version>2.9.9</jackson.version>
@@ -1266,6 +1267,16 @@
 				<artifactId>mchange-commons-java</artifactId>
 				<version>${mchange.commons.version}</version>
 			</dependency>
+			<dependency>
+    			<groupId>org.hibernate</groupId>
+    			<artifactId>hibernate-hikaricp</artifactId>
+    			<version>${hibernate.version}</version>
+			</dependency>
+			<dependency>
+      			<groupId>com.zaxxer</groupId>
+      			<artifactId>HikariCP</artifactId>
+      			<version>${hikari.version}</version>
+    		</dependency>
 			<dependency>
 				<groupId>org.hibernate.common</groupId>
 				<artifactId>hibernate-commons-annotations</artifactId>
