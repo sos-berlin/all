@@ -38,11 +38,11 @@
 		<project.reporting.outputEncoding>Cp1252</project.reporting.outputEncoding>
 		<slf4j.version>1.7.21</slf4j.version>
 		<guava.version>29.0-jre</guava.version>
-		<junit.version>4.11</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<antlr.version>2.7.7</antlr.version>
 		<hamcrest.version>1.3</hamcrest.version>
 		<log4j.version>2.13.2</log4j.version>
-		<joda.time.version>2.9.9</joda.time.version>
+		<joda.time.version>2.10.10</joda.time.version>
 		<!--joda.time.hibernate.version>1.3</joda.time.hibernate.version -->
 		<hibernate.version>5.4.19.Final</hibernate.version>
 		<hibernate.commons.annotation.version>5.0.1.Final</hibernate.commons.annotation.version>
@@ -50,7 +50,7 @@
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mchange.commons.version>0.2.11</mchange.commons.version>
         <jackson.version>2.9.9</jackson.version>
-        <jackson.databind.version>2.9.10.1</jackson.databind.version>
+        <jackson.databind.version>2.9.10.7</jackson.databind.version>
 		<woodstox.version>5.2.0</woodstox.version>
 		<stax2.version>4.2</stax2.version>
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
@@ -96,7 +96,7 @@
 		<commons.cli.version>1.2</commons.cli.version>
 		<commons.lang.version>2.4</commons.lang.version>
 		<commons.beanutils.version>1.9.4</commons.beanutils.version>
-		<apache.poi.version>3.10-FINAL</apache.poi.version>
+		<apache.poi.version>3.17</apache.poi.version>
 		<google.inject.version>4.2.0</google.inject.version>
 		<google.findbugs.version>3.0.0</google.findbugs.version>
 		<jcraft.version>0.1.55</jcraft.version>
