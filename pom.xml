@@ -76,7 +76,7 @@
 		<apache.shiro.version>1.7.1</apache.shiro.version>
 		<apache.activemq.version>5.4.2</apache.activemq.version>
 		<webdavclient4j.version>0.92</webdavclient4j.version>
-		<apache.httpcomponents.httpclient.version>4.5.2</apache.httpcomponents.httpclient.version>
+		<apache.httpcomponents.httpclient.version>4.5.13</apache.httpcomponents.httpclient.version>
 		<slide.webdavlib.version>2.1</slide.webdavlib.version>
 		<jaxen.version>1.2.0</jaxen.version>
         <!--bouncycastle.version>1.54</bouncycastle.version-->
