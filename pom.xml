@@ -82,7 +82,7 @@
         <!--bouncycastle.version>1.54</bouncycastle.version-->
 		<bouncycastle.version>1.68</bouncycastle.version>
         <itext.version>1.3</itext.version>
-		<jsoup.version>1.6.3</jsoup.version>
+		<!--jsoup.version>1.14.2</jsoup.version-->
 		<!-- This is explicitly not the newest version, because it causes a java.lang.NoClassDefFoundError 
 			(see http://stackoverflow.com/questions/13840989/eclipse-java-lang-noclassdeffounderror-org-w3c-dom-elementtraversal) -->
 		<!-- xml.apis.version>2.0.2</xml.apis.version -->
@@ -1643,11 +1643,11 @@
 				<artifactId>ldapjdk</artifactId>
 				<version>${ldap.jdk.version}</version>
 			</dependency>
-			<dependency>
+			<!--dependency>
 				<groupId>org.jsoup</groupId>
 				<artifactId>jsoup</artifactId>
 				<version>${jsoup.version}</version>
-			</dependency>
+			</dependency-->
 			<!-- Dependency for Notification Monitor -->
 			<dependency>
 				<groupId>com.googlecode.jsendnsca</groupId>
