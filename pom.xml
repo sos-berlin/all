@@ -21,7 +21,6 @@
 		<module>commons</module>
 		<module>commons-graphviz</module>
 		<module>commons-jobscheduler</module>
-		<!--module>joe</module-->
 		<module>jade</module>
 		<module>jitl</module>
 		<module>joc</module>
