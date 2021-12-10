@@ -50,7 +50,7 @@
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mchange.commons.version>0.2.11</mchange.commons.version>
         <jackson.version>2.9.9</jackson.version>
-        <jackson.databind.version>2.9.10.7</jackson.databind.version>
+        <jackson.databind.version>2.9.10.8</jackson.databind.version>
 		<woodstox.version>5.2.0</woodstox.version>
 		<stax2.version>4.2</stax2.version>
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
@@ -90,7 +90,7 @@
 		<apache.commons.codec.version>1.9</apache.commons.codec.version>
 		<apache.commons.lang.version>3.1</apache.commons.lang.version>
 		<apache.commons.net.version>3.8.0</apache.commons.net.version>
-		<apache.commons.csv.version>1.1</apache.commons.csv.version>
+		<apache.commons.csv.version>1.9.0</apache.commons.csv.version>
         <apache.commons.io.version>2.7</apache.commons.io.version>
 		<commons.collections.version>3.2.2</commons.collections.version>
 		<commons.cli.version>1.2</commons.cli.version>
