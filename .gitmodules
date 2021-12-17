@@ -1,6 +1,3 @@
-[submodule "joe"]
-	path = joe
-	url = git@github.com:sos-berlin/joe.git
 [submodule "joc"]
 	path = joc
 	url = git@github.com:sos-berlin/joc.git
