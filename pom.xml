@@ -29,8 +29,8 @@
 	<properties>
         <sos.engine.version>${project.version}</sos.engine.version>
         <versionBranch>release/1.13</versionBranch>
-        <releaseVersion>1.13.10</releaseVersion>
-        <snapshotVersion>1.13.11-SNAPSHOT</snapshotVersion>
+        <releaseVersion>1.13.11</releaseVersion>
+        <snapshotVersion>1.13.12-SNAPSHOT</snapshotVersion>
 		<project.base.path>${project.artifactId}</project.base.path>
 		<!-- The current encoding properties - should be changed to UTF-8 -->
 		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
@@ -42,7 +42,6 @@
 		<log4j.version>2.17.0</log4j.version>
 		<joda.time.version>2.10.10</joda.time.version>
 		<!--joda.time.hibernate.version>1.3</joda.time.hibernate.version -->
-        <!--hibernate.version>5.2.6.Final</hibernate.version-->
         <hibernate.version>5.4.19.Final</hibernate.version>
 		<hibernate.commons.annotation.version>5.0.1.Final</hibernate.commons.annotation.version>
 		<hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
@@ -63,12 +62,10 @@
 		<xalan.version>2.7.1</xalan.version>
 		<jta.version>1.1</jta.version>
 		<maria.db.driver.version>1.3.0</maria.db.driver.version>
-        <!--jcifs-ng.version>2.0.8</jcifs-ng.version-->
         <jcifs-ng.version>2.1.5</jcifs-ng.version>
-        <!--dom4j.version>1.6.1</dom4j.version-->
         <dom4j.version>2.1.3</dom4j.version>
 		<jasperreports.version>3.7.2</jasperreports.version>
-		<h2.version>1.3.170</h2.version>
+		<h2.version>2.0.202</h2.version>
 		<saxon.version>9.8.0-5</saxon.version>
 		<javax.mail.version>1.4.7</javax.mail.version>
 		<apache.shiro.version>1.8.0</apache.shiro.version>
@@ -77,10 +74,8 @@
 		<apache.httpcomponents.httpclient.version>4.5.13</apache.httpcomponents.httpclient.version>
 		<slide.webdavlib.version>2.1</slide.webdavlib.version>
 		<jaxen.version>1.2.0</jaxen.version>
-        <!--bouncycastle.version>1.54</bouncycastle.version-->
 		<bouncycastle.version>1.68</bouncycastle.version>
         <itext.version>1.3</itext.version>
-		<!--jsoup.version>1.14.2</jsoup.version-->
 		<!-- This is explicitly not the newest version, because it causes a java.lang.NoClassDefFoundError 
 			(see http://stackoverflow.com/questions/13840989/eclipse-java-lang-noclassdeffounderror-org-w3c-dom-elementtraversal) -->
 		<!-- xml.apis.version>2.0.2</xml.apis.version -->
@@ -127,7 +122,6 @@
 		<typesafe.config.version>1.3.0</typesafe.config.version>
 		<keepass.java2.version>2.1.4</keepass.java2.version>
         <jaxb.version>2.4.0-b180830.0438</jaxb.version>
-        <!--jaxb.version>2.3.3</jaxb.version-->
 		<jaxb.api.version>2.4.0-b180830.0359</jaxb.api.version>
 		<activation.version>1.1.1</activation.version>
         <txtmark.version>0.13</txtmark.version>
