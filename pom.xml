@@ -62,10 +62,9 @@
 		<xalan.version>2.7.1</xalan.version>
 		<jta.version>1.1</jta.version>
 		<maria.db.driver.version>1.3.0</maria.db.driver.version>
-        <jcifs-ng.version>2.1.5</jcifs-ng.version>
+        <jcifs-ng.version>2.1.7</jcifs-ng.version>
         <dom4j.version>2.1.3</dom4j.version>
 		<jasperreports.version>3.7.2</jasperreports.version>
-		<h2.version>2.0.206</h2.version>
 		<saxon.version>9.8.0-5</saxon.version>
 		<javax.mail.version>1.4.7</javax.mail.version>
 		<apache.shiro.version>1.8.0</apache.shiro.version>
@@ -1283,11 +1282,6 @@
 				<groupId>xerces</groupId>
 				<artifactId>xercesImpl</artifactId>
 				<version>${xerces.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.h2database</groupId>
-				<artifactId>h2</artifactId>
-				<version>${h2.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>net.sf.saxon</groupId>
