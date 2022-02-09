@@ -42,7 +42,7 @@
 		<log4j.version>2.17.1</log4j.version>
 		<joda.time.version>2.10.10</joda.time.version>
 		<!--joda.time.hibernate.version>1.3</joda.time.hibernate.version -->
-        <hibernate.version>5.4.19.Final</hibernate.version>
+        <hibernate.version>5.4.24.Final</hibernate.version>
 		<hibernate.commons.annotation.version>5.0.1.Final</hibernate.commons.annotation.version>
 		<hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
 		<hikari.version>3.4.5</hikari.version>
