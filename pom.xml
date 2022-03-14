@@ -71,6 +71,7 @@
 		<apache.activemq.version>5.4.2</apache.activemq.version>
 		<webdavclient4j.version>0.92</webdavclient4j.version>
 		<apache.httpcomponents.httpclient.version>4.5.13</apache.httpcomponents.httpclient.version>
+		<apache.jackrabbit.version>2.21.10</apache.jackrabbit.version>
 		<slide.webdavlib.version>2.1</slide.webdavlib.version>
 		<jaxen.version>1.2.0</jaxen.version>
 		<bouncycastle.version>1.70</bouncycastle.version>
@@ -1312,6 +1313,11 @@
 				<groupId>org.apache.httpcomponents</groupId>
 				<artifactId>httpclient</artifactId>
 				<version>${apache.httpcomponents.httpclient.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.jackrabbit</groupId>
+				<artifactId>jackrabbit-webdav</artifactId>
+				<version>${apache.jackrabbit.version}</version>
 			</dependency>
             <dependency>
                 <groupId>commons-io</groupId>
