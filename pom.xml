@@ -42,14 +42,14 @@
 		<log4j.version>2.17.1</log4j.version>
 		<joda.time.version>2.10.10</joda.time.version>
 		<!--joda.time.hibernate.version>1.3</joda.time.hibernate.version -->
-        <hibernate.version>5.4.19.Final</hibernate.version>
-		<hibernate.commons.annotation.version>5.0.1.Final</hibernate.commons.annotation.version>
+        <hibernate.version>5.5.4.Final</hibernate.version>
+		<hibernate.commons.annotation.version>5.1.2.Final</hibernate.commons.annotation.version>
 		<hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
 		<hikari.version>3.4.5</hikari.version>
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mchange.commons.version>0.2.11</mchange.commons.version>
-        <jackson.version>2.9.9</jackson.version>
-        <jackson.databind.version>2.9.10.8</jackson.databind.version>
+        <jackson.version>2.13.2</jackson.version>
+        <jackson.databind.version>2.13.2.1</jackson.databind.version>
 		<woodstox.version>5.2.0</woodstox.version>
 		<stax2.version>4.2</stax2.version>
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
