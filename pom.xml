@@ -50,7 +50,7 @@
 		<mchange.commons.version>0.2.11</mchange.commons.version>
         <jackson.version>2.13.2</jackson.version>
         <jackson.databind.version>2.13.2.1</jackson.databind.version>
-		<woodstox.version>5.2.0</woodstox.version>
+		<woodstox.version>6.2.7</woodstox.version>
 		<stax2.version>4.2</stax2.version>
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
 		<classmate.version>1.3.0</classmate.version>
