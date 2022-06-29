@@ -91,7 +91,6 @@
 		<commons.cli.version>1.2</commons.cli.version>
 		<commons.lang.version>2.4</commons.lang.version>
 		<commons.beanutils.version>1.9.4</commons.beanutils.version>
-		<apache.poi.version>3.17</apache.poi.version>
 		<google.inject.version>4.2.0</google.inject.version>
 		<google.findbugs.version>3.0.0</google.findbugs.version>
         <sshj.version>0.32.0</sshj.version>
@@ -1448,11 +1447,6 @@
                 <artifactId>dom4j</artifactId>
                 <version>${dom4j.version}</version>
             </dependency>
-			<dependency>
-				<groupId>org.apache.poi</groupId>
-				<artifactId>poi</artifactId>
-				<version>${apache.poi.version}</version>
-			</dependency>
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>javax.servlet-api</artifactId>
