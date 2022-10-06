@@ -48,9 +48,9 @@
 		<hikari.version>3.4.5</hikari.version>
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mchange.commons.version>0.2.11</mchange.commons.version>
-        <jackson.version>2.13.2</jackson.version>
-        <jackson.databind.version>2.13.2.1</jackson.databind.version>
-		<woodstox.version>6.2.7</woodstox.version>
+        <jackson.version>2.13.4</jackson.version>
+        <jackson.databind.version>2.13.4</jackson.databind.version>
+		<woodstox.version>6.3.1</woodstox.version>
 		<stax2.version>4.2</stax2.version>
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
 		<classmate.version>1.3.0</classmate.version>
