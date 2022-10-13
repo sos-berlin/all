@@ -67,7 +67,7 @@
 		<jasperreports.version>3.7.2</jasperreports.version>
 		<saxon.version>9.8.0-5</saxon.version>
 		<javax.mail.version>1.4.7</javax.mail.version>
-		<apache.shiro.version>1.9.1</apache.shiro.version>
+		<apache.shiro.version>1.10.0</apache.shiro.version>
 		<apache.activemq.version>5.4.2</apache.activemq.version>
 		<webdavclient4j.version>0.92</webdavclient4j.version>
 		<apache.httpcomponents.httpclient.version>4.5.13</apache.httpcomponents.httpclient.version>
