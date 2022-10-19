@@ -49,7 +49,7 @@
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mchange.commons.version>0.2.11</mchange.commons.version>
         <jackson.version>2.13.4</jackson.version>
-        <jackson.databind.version>2.13.4</jackson.databind.version>
+        <jackson.databind.version>2.13.4.1</jackson.databind.version>
 		<woodstox.version>6.3.1</woodstox.version>
 		<stax2.version>4.2</stax2.version>
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
@@ -115,7 +115,7 @@
 		<jtds.version>1.3.1</jtds.version>
 		<postgresql.version>42.4.1</postgresql.version>
 		<db2.jcc.version>1.3.1</db2.jcc.version>
-		<ini4j.version>0.5.2</ini4j.version>
+		<ini4j.version>0.5.4</ini4j.version>
 		<scala.base.version>2.11</scala.base.version>
 		<typesafe.config.version>1.3.0</typesafe.config.version>
 		<keepass.java2.version>2.1.4</keepass.java2.version>
