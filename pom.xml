@@ -84,7 +84,7 @@
 		<apache.commons.httpclient.version>3.1</apache.commons.httpclient.version>
 		<apache.commons.codec.version>1.9</apache.commons.codec.version>
 		<apache.commons.lang.version>3.1</apache.commons.lang.version>
-		<apache.commons.net.version>3.8.0</apache.commons.net.version>
+		<apache.commons.net.version>3.9.0</apache.commons.net.version>
 		<apache.commons.csv.version>1.9.0</apache.commons.csv.version>
         <apache.commons.io.version>2.7</apache.commons.io.version>
 		<commons.collections.version>3.2.2</commons.collections.version>
