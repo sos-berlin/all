@@ -29,8 +29,8 @@
 	<properties>
         <sos.engine.version>${project.version}</sos.engine.version>
         <versionBranch>release/1.13</versionBranch>
-        <releaseVersion>1.13.16</releaseVersion>
-        <snapshotVersion>1.13.17-SNAPSHOT</snapshotVersion>
+        <releaseVersion>1.13.17</releaseVersion>
+        <snapshotVersion>1.13.18-SNAPSHOT</snapshotVersion>
 		<project.base.path>${project.artifactId}</project.base.path>
 		<!-- The current encoding properties - should be changed to UTF-8 -->
 		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
