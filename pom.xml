@@ -119,7 +119,7 @@
 		<ini4j.version>0.5.4</ini4j.version>
 		<scala.base.version>2.11</scala.base.version>
 		<typesafe.config.version>1.3.0</typesafe.config.version>
-		<keepass.java2.version>2.1.4</keepass.java2.version>
+		<keepass.java2.version>2.2.1</keepass.java2.version>
         <jaxb.version>2.4.0-b180830.0438</jaxb.version>
 		<jaxb.api.version>2.4.0-b180830.0359</jaxb.api.version>
 		<activation.version>1.1.1</activation.version>
@@ -1736,6 +1736,31 @@
                 <artifactId>KeePassJava2-jaxb</artifactId>
                 <version>${keepass.java2.version}</version>
             </dependency>
+			<dependency>
+			    <groupId>org.linguafranca.pwdb</groupId>
+			    <artifactId>KeePassJava2-kdbx</artifactId>
+			    <version>${keepass.java2.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.linguafranca.pwdb</groupId>
+			    <artifactId>database</artifactId>
+			    <version>${keepass.java2.version}</version>
+			    <exclusions>
+			        <exclusion>
+			            <groupId>org.bouncycastle</groupId>
+			            <artifactId>bcprov-jdk18on</artifactId> 
+			        </exclusion>
+			        <exclusion>
+			            <groupId>org.bouncycastle</groupId>
+			            <artifactId>bcutil-jdk18on</artifactId> 
+			        </exclusion>
+			    </exclusions>
+			</dependency>
+			<dependency>
+			    <groupId>org.linguafranca.pwdb</groupId>
+			    <artifactId>KeePassJava2-simple</artifactId>
+			    <version>${keepass.java2.version}</version>
+			</dependency>
             <dependency>
 				<groupId>javax.xml.bind</groupId>
 				<artifactId>jaxb-api</artifactId>
