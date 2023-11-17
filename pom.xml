@@ -82,7 +82,7 @@
 		<xml.apis.version>1.4.01</xml.apis.version>
 		<apache.commons.logging.version>1.2</apache.commons.logging.version>
 		<apache.commons.httpclient.version>3.1</apache.commons.httpclient.version>
-		<apache.commons.codec.version>1.9</apache.commons.codec.version>
+		<apache.commons.codec.version>1.15</apache.commons.codec.version>
 		<apache.commons.lang.version>3.1</apache.commons.lang.version>
 		<apache.commons.net.version>3.10.0</apache.commons.net.version>
 		<apache.commons.csv.version>1.9.0</apache.commons.csv.version>
@@ -93,6 +93,8 @@
 		<commons.beanutils.version>1.9.4</commons.beanutils.version>
 		<google.inject.version>4.2.0</google.inject.version>
 		<google.findbugs.version>3.0.0</google.findbugs.version>
+        <!-- KeePass makes use of Guava 19, to use current guava version the next dependency is needed -->
+        <guava.version>32.0.1-jre</guava.version>
         <sshj.version>0.37.0</sshj.version>
         <smbj.version>0.12.2</smbj.version>
 		<jcraft.version>0.1.55</jcraft.version>
@@ -1478,6 +1480,12 @@
 				<artifactId>bcprov-ext-jdk15to18</artifactId>
 				<version>${bouncycastle.version}</version>
 			</dependency>
+             <!-- KeePass makes use of Guava 19, to use current guava version the next dependency is needed -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId> 
+                <version>${guava.version}</version>
+            </dependency>
 			<dependency>
 				<groupId>com.lowagie</groupId>
 				<artifactId>itext</artifactId>
@@ -1756,12 +1764,7 @@
 			        </exclusion>
 			    </exclusions>
 			</dependency>
-			<dependency>
-			    <groupId>org.linguafranca.pwdb</groupId>
-			    <artifactId>KeePassJava2-simple</artifactId>
-			    <version>${keepass.java2.version}</version>
-			</dependency>
-            <dependency>
+		    <dependency>
 				<groupId>javax.xml.bind</groupId>
 				<artifactId>jaxb-api</artifactId>
 				<version>${jaxb.api.version}</version>
