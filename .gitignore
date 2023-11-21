@@ -18,3 +18,4 @@
 # DOUBLE-CHECK GENERATED FILES
 *.class
 *.jar
+/depTree.txt

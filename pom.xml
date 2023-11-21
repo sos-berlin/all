@@ -35,11 +35,11 @@
 		<!-- The current encoding properties - should be changed to UTF-8 -->
 		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>Cp1252</project.reporting.outputEncoding>
-		<slf4j.version>1.7.35</slf4j.version>
+		<slf4j.version>1.7.36</slf4j.version>
 		<junit.version>4.13.1</junit.version>
 		<antlr.version>2.7.7</antlr.version>
 		<hamcrest.version>1.3</hamcrest.version>
-		<log4j.version>2.17.1</log4j.version>
+		<log4j.version>2.21.1</log4j.version>
 		<joda.time.version>2.12.1</joda.time.version>
 		<!--joda.time.hibernate.version>1.3</joda.time.hibernate.version -->
         <hibernate.version>5.5.4.Final</hibernate.version>
@@ -50,7 +50,7 @@
 		<mchange.commons.version>0.2.11</mchange.commons.version>
         <jackson.version>2.14.2</jackson.version>
         <jackson.databind.version>2.14.2</jackson.databind.version>
-		<woodstox.version>6.4.0</woodstox.version>
+		<woodstox.version>6.5.0</woodstox.version>
 		<stax2.version>4.2</stax2.version>
 		<jersey.glassfish.version>2.22.2</jersey.glassfish.version>
 		<classmate.version>1.3.0</classmate.version>
@@ -82,7 +82,7 @@
 		<xml.apis.version>1.4.01</xml.apis.version>
 		<apache.commons.logging.version>1.2</apache.commons.logging.version>
 		<apache.commons.httpclient.version>3.1</apache.commons.httpclient.version>
-		<apache.commons.codec.version>1.15</apache.commons.codec.version>
+		<apache.commons.codec.version>1.16.0</apache.commons.codec.version>
 		<apache.commons.lang.version>3.1</apache.commons.lang.version>
 		<apache.commons.net.version>3.10.0</apache.commons.net.version>
 		<apache.commons.csv.version>1.9.0</apache.commons.csv.version>
@@ -1477,6 +1477,21 @@
 			</dependency>
 			<dependency>
 				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcpg-jdk15to18</artifactId>
+				<version>${bouncycastle.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcutil-jdk15to18</artifactId>
+				<version>${bouncycastle.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcpkix-jdk15to18</artifactId>
+				<version>${bouncycastle.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.bouncycastle</groupId>
 				<artifactId>bcprov-ext-jdk15to18</artifactId>
 				<version>${bouncycastle.version}</version>
 			</dependency>
@@ -1733,21 +1748,45 @@
                 <groupId>org.linguafranca.pwdb</groupId>
                 <artifactId>KeePassJava2-kdb</artifactId>
                 <version>${keepass.java2.version}</version>
+                <exclusions>
+                	<exclusion>
+                		<groupId>ch.qos.logback</groupId>
+                		<artifactId>logback-classic</artifactId>
+                	</exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.linguafranca.pwdb</groupId>
                 <artifactId>KeePassJava2-dom</artifactId>
                 <version>${keepass.java2.version}</version>
+                <exclusions>
+                	<exclusion>
+                		<groupId>ch.qos.logback</groupId>
+                		<artifactId>logback-classic</artifactId>
+                	</exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.linguafranca.pwdb</groupId>
                 <artifactId>KeePassJava2-jaxb</artifactId>
                 <version>${keepass.java2.version}</version>
+                <exclusions>
+                	<exclusion>
+                		<groupId>ch.qos.logback</groupId>
+                		<artifactId>logback-classic</artifactId>
+                	</exclusion>
+                </exclusions>
             </dependency>
 			<dependency>
 			    <groupId>org.linguafranca.pwdb</groupId>
 			    <artifactId>KeePassJava2-kdbx</artifactId>
 			    <version>${keepass.java2.version}</version>
+                <exclusions>
+                	<exclusion>
+                		<groupId>ch.qos.logback</groupId>
+                		<artifactId>logback-classic</artifactId>
+                	</exclusion>
+                </exclusions>
 			</dependency>
 			<dependency>
 			    <groupId>org.linguafranca.pwdb</groupId>
@@ -1761,6 +1800,10 @@
 			        <exclusion>
 			            <groupId>org.bouncycastle</groupId>
 			            <artifactId>bcutil-jdk18on</artifactId> 
+			        </exclusion>
+			        <exclusion>
+			            <groupId>org.bouncycastle</groupId>
+			            <artifactId>bcpkix-jdk18on</artifactId> 
 			        </exclusion>
 			    </exclusions>
 			</dependency>
